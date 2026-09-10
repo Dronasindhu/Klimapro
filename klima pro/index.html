@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="de" class="lenis"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KlimaPro — AC Supplied, Professionally Installed &amp; Maintained</title>
+<meta name="description" content="Air conditioning for homes in Greater Zurich. Supplied, professionally installed and maintained. Get your estimate in 2 minutes.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --charcoal:#121414;
+  --sage:#8A9A8E;
+  --sage-light:#E8EDE9;
+  --stone:#F6F5F2;
+  --stone-2:#EEECE7;
+  --border:#E8E6E0;
+  --amber:#D6A15C;
+  --accent:#1A1E1E;
+  --muted:#6B7280;
+  --radius:16px;
+  --radius-pill:999px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--stone);color:var(--charcoal);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+@media(min-width:1024px){.container{padding:0 32px}}
+
+/* HOVER & TRANSITION ANIMATIONS */
+.btn{
+  appearance:none;
+  border:0;
+  font:600 15px/1 Inter;
+  letter-spacing:-0.01em;
+  border-radius:var(--radius-pill);
+  padding:14px 22px;
+  cursor:pointer;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, background 0.2s ease, border-color 0.2s ease;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  justify-content:center;
+}
+.btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.btn:active{
+  transform: translateY(0);
+}
+.btn-primary{background:var(--charcoal);color:#fff}
+.btn-primary:hover{background:#2a2f2f}
+.btn-secondary{background:#fff;color:var(--charcoal);border:1px solid var(--border)}
+.btn-secondary:hover{border-color:var(--charcoal)}
+.btn-ghost{background:transparent;border:1px solid var(--border)}
+.btn-small{padding:10px 16px;font-size:14px}
+
+.nav{position:sticky;top:0;z-index:40;background:rgba(246,245,242,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font:700 18px/1 Inter;letter-spacing:-0.03em;display:flex;align-items:center;gap:10px;transition: transform 0.2s ease;}
+.logo:hover{transform: scale(1.02);}
+.logo-mark{width:32px;height:32px;border-radius:999px;background:var(--charcoal);color:#fff;display:grid;place-items:center;font:700 13px Inter;transition: transform 0.3s ease;}
+.logo:hover .logo-mark{transform: rotate(-10deg) scale(1.05);}
+.nav-links{display:none;gap:22px;font:500 14px Inter}
+.nav-links a{opacity:.75;transition: opacity 0.2s ease, transform 0.2s ease; display: inline-block;}
+.nav-links a:hover{opacity:1; transform: translateY(-1px);}
+@media(min-width:900px){.nav-links{display:flex}}
+.nav-actions{display:flex;align-items:center;gap:8px}
+.lang-switch{display:flex;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px;gap:2px}
+.lang-switch button{border:0;background:transparent;padding:6px 12px;border-radius:999px;font:600 12px Inter;cursor:pointer;transition: all 0.2s ease;}
+.lang-switch button.active{background:var(--charcoal);color:#fff}
+.hamburger{display:flex;border:1px solid var(--border);background:#fff;width:42px;height:42px;border-radius:12px;align-items:center;justify-content:center;transition: transform 0.2s ease;}
+.hamburger:hover{transform: scale(1.05);}
+@media(min-width:900px){.hamburger{display:none}}
+.mobile-menu{position:fixed;inset:64px 0 0 0;background:var(--stone);z-index:39;padding:24px;display:none}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;padding:14px 0;border-bottom:1px solid var(--border);font:500 16px Inter}
+
+/* HERO */
+.hero{padding:40px 0 32px}
+@media(min-width:900px){.hero{padding:64px 0 40px}}
+.hero-grid{display:grid;gap:32px}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.05fr .95fr;align-items:center;gap:48px}}
+.eyebrow{font:600 11px Inter;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:8px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--sage)}
+.hero h1{font:700 clamp(32px,5vw,52px)/.95 Inter;letter-spacing:-0.04em;margin:14px 0 14px}
+.hero h1 em{font-family:'Instrument Serif',serif;font-weight:400;letter-spacing:-0.02em;color:#4A5555}
+.hero-sub{color:#4B5563;font-size:17px;line-height:1.6;max-width:560px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.hero-proof{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.pill{font:500 12px Inter;background:#fff;border:1px solid var(--border);border-radius:999px;padding:8px 12px;display:inline-flex;align-items:center;gap:6px;transition: transform 0.2s ease, box-shadow 0.2s ease;}
+.pill:hover{transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05);}
+.hero-visual{position:relative;background:var(--stone-2);border-radius:24px;overflow:hidden;aspect-ratio:4/3;border:1px solid var(--border)}
+.hero-carousel{display:flex;overflow:hidden;height:100%}
+.hero-slide{min-width:100%;position:relative;transition: transform 0.4s ease-in-out;}
+.hero-slide img{width:100%;height:100%;object-fit:cover;transition: transform 0.5s ease;}
+.hero-visual:hover .hero-slide img{transform: scale(1.02);}
+
+/* Carousel Side Navigation Buttons */
+.carousel-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.85);
+  border:1px solid var(--border);
+  color:var(--charcoal);
+  font-size:18px;
+  font-weight:700;
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  z-index:5;
+  transition: background 0.2s ease, transform 0.2s ease;
+  backdrop-filter:blur(4px);
+}
+.carousel-btn:hover{
+  background:#fff;
+  transform:translateY(-50%) scale(1.1);
+}
+.carousel-btn.prev{left:12px}
+.carousel-btn.next{right:12px}
+
+.hero-dots{position:absolute;bottom:72px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:2}
+.dot{width:8px;height:8px;border-radius:999px;background:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.8);cursor:pointer;transition: transform 0.2s ease, background 0.2s ease;}
+.dot:hover{transform: scale(1.3);}
+.dot.active{background:#fff}
+.hero-card{position:absolute;bottom:16px;left:16px;right:16px;background:#fff;border-radius:16px;padding:16px;border:1px solid var(--border);box-shadow:0 12px 32px rgba(0,0,0,.08);z-index:2;transition: transform 0.3s ease, box-shadow 0.3s ease;}
+.hero-card:hover{transform: translateY(-3px); box-shadow: 0 16px 36px rgba(0,0,0,0.12);}
+.hero-card-row{display:flex;justify-content:space-between;gap:12px;font:500 13px Inter}
+.hero-card strong{font-size:18px}
+
+/* TRUST - MOVED & ENLARGED */
+.trust{
+  padding:48px 0;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  background:transparent;
+  margin-top:24px;
+}
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px 24px}
+@media(min-width:700px){.trust-grid{grid-template-columns:repeat(4,1fr)}}
+.trust-item{display:flex;gap:16px;align-items:flex-start;transition: transform 0.3s ease;}
+.trust-item:hover{transform: translateY(-3px);}
+.trust-item span{
+  width:48px;
+  height:48px;
+  border-radius:14px;
+  background:var(--sage-light);
+  display:grid;
+  place-items:center;
+  flex:0 0 48px;
+  font-size:20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.trust-item:hover span{transform: scale(1.1) rotate(6deg); background: var(--sage); color: #fff;}
+.trust-item b{font:600 16px Inter;display:block;margin-bottom:4px}
+.trust-item p{font:400 14px/1.5 Inter;color:var(--muted)}
+
+/* SECTION */
+.section{padding:56px 0}
+@media(min-width:900px){.section{padding:88px 0}}
+.section-label{font:600 11px Inter;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.section h2{font:700 clamp(26px,3.5vw,36px)/1.05 Inter;letter-spacing:-0.03em;margin-bottom:12px}
+.section h2 em{font-family:'Instrument Serif',serif;font-weight:400}
+.lead{color:#4B5563;max-width:640px;font-size:16px}
+.grid-3{display:grid;gap:16px;margin-top:28px}
+@media(min-width:900px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+
+.card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:22px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+.card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.08);
+  border-color: #d0ceca;
+}
+.card img{transition: transform 0.4s ease;}
+.card:hover img{transform: scale(1.03);}
+
+.card-popular{border-color:var(--charcoal);position:relative}
+.card-popular:hover{border-color:var(--charcoal)}
+.badge{position:absolute;top:-10px;left:20px;background:var(--charcoal);color:#fff;font:700 11px Inter;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:999px}
+.price{font:700 28px Inter;letter-spacing:-0.03em}
+.price span{font:500 13px Inter;color:var(--muted)}
+.card ul{list-style:none;display:grid;gap:8px;margin-top:2px}
+.card li{font:400 14px Inter;display:flex;gap:8px;color:#374151}
+.card li::before{content:"✓";color:var(--sage);font-weight:700}
+
+.how{display:grid;gap:16px;margin-top:28px}
+@media(min-width:900px){.how{grid-template-columns:repeat(5,1fr)}}
+.step{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:20px;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.step:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+}
+.step-top{display:flex;justify-content:space-between;align-items:flex-start}
+.step-num{width:28px;height:28px;border-radius:999px;background:var(--charcoal);color:#fff;display:grid;place-items:center;font:700 12px Inter}
+.step-icon{width:40px;height:40px;border-radius:12px;background:var(--sage-light);display:grid;place-items:center;font-size:18px;border:1px solid #DCE3DC;transition: transform 0.3s ease;}
+.step:hover .step-icon{transform: scale(1.1) rotate(5deg);}
+.step b{font:600 14px Inter}
+.step p{font:400 13px Inter;color:var(--muted)}
+
+/* PROS VS DIY */
+.pros-grid{display:grid;gap:16px;margin-top:22px}
+@media(min-width:900px){.pros-grid{grid-template-columns:1fr 1fr 1.1fr}}
+.pro-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:22px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.pro-card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.07);
+}
+.pro-card.dark{background:var(--charcoal);color:#fff;border-color:var(--charcoal)}
+.pro-card.dark:hover{box-shadow: 0 18px 36px rgba(0,0,0,0.25);}
+.pro-card ul{list-style:none;display:grid;gap:10px;margin-top:12px}
+.pro-card li{font:500 14px Inter;display:flex;gap:10px}
+.pro-card li span.icon{width:26px;height:26px;border-radius:8px;background:var(--sage-light);display:grid;place-items:center;flex:0 0 26px;font-size:13px;transition: transform 0.2s ease;}
+.pro-card li:hover span.icon{transform: scale(1.15);}
+.pro-card.dark li span.icon{background:rgba(255,255,255,.14);color:#fff}
+.pro-card.dark li{color:#E6E8E8}
+
+/* MODAL */
+.modal{position:fixed;inset:0;background:rgba(18,20,20,.55);backdrop-filter:blur(6px);z-index:70;display:none;overflow-y:auto;padding:24px;transition: opacity 0.3s ease;}
+.modal.open{display:block}
+.modal-panel{max-width:760px;margin:24px auto;background:var(--stone);border-radius:24px;overflow:hidden;border:1px solid var(--border);box-shadow:0 24px 64px rgba(0,0,0,.2);transform: translateY(0);transition: transform 0.3s ease;}
+.modal-head{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);padding:14px 20px;display:flex;justify-content:space-between;align-items:center;z-index:2}
+.carousel-wrap{position:relative}
+
+.estimator{background:var(--charcoal);color:#fff;border-radius:24px;padding:28px;display:grid;gap:24px;transition: transform 0.3s ease, box-shadow 0.3s ease;}
+.estimator:hover{transform: translateY(-3px); box-shadow: 0 16px 36px rgba(0,0,0,0.18);}
+@media(min-width:900px){.estimator{grid-template-columns:1.1fr .9fr;align-items:center;padding:36px}}
+.estimator h3{font:700 28px/1.05 Inter;letter-spacing:-0.03em}
+.estimator-sub{opacity:.75;margin-top:8px}
+.estimator-card{background:#fff;color:var(--charcoal);border-radius:16px;padding:18px;transition: transform 0.3s ease;}
+.estimator-card:hover{transform: translateY(-2px);}
+.chip-grid{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chip{border:1px solid var(--border);background:#fff;border-radius:999px;padding:10px 14px;font:500 14px Inter;cursor:pointer;transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;display:inline-flex;align-items:center;gap:6px;}
+.chip:hover{transform: translateY(-2px);}
+.chip.active{background:var(--charcoal);color:#fff;border-color:var(--charcoal)}
+.input{width:100%;border:1px solid var(--border);border-radius:12px;padding:12px 14px;font:500 14px Inter;background:#fff;transition: border-color 0.2s ease, box-shadow 0.2s ease;}
+.input:focus{outline:none;border-color:var(--charcoal);box-shadow:0 0 0 3px rgba(18,20,20,0.08);}
+
+.table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.table th{font:600 12px Inter;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:14px 16px;border-bottom:1px solid var(--border)}
+.table td{padding:12px 16px;font:400 14px Inter;border-bottom:1px solid var(--border);transition: background-color 0.2s ease;}
+.table tr:hover td{background-color: var(--stone);}
+.table tr:last-child td{border-bottom:0}
+
+.split{display:grid;gap:16px}
+@media(min-width:900px){.split{grid-template-columns:1fr 1fr}}
+.maintenance{background:var(--sage-light);border:1px solid #DCE3DC;border-radius:24px;padding:28px;transition: transform 0.3s ease, box-shadow 0.3s ease;}
+.maintenance:hover{transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,0.06);}
+@media(min-width:900px){.maintenance{padding:32px}}
+
+.faq-item{background:#fff;border:1px solid var(--border);border-radius:14px;padding:0;overflow:hidden;transition: transform 0.2s ease, box-shadow 0.2s ease;}
+.faq-item:hover{transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.04);}
+.faq-item summary{padding:16px 18px;font:600 14px Inter;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px;transition: background-color 0.2s ease;}
+.faq-item summary:hover{background-color: var(--stone);}
+.faq-item[open] summary{border-bottom:1px solid var(--border)}
+.faq-item p{padding:14px 18px;color:#4B5563;font:400 14px Inter}
+
+.service-map{display:grid;gap:16px}
+@media(min-width:900px){.service-map{grid-template-columns:1.2fr .8fr}}
+.map{height:360px;background:#fff;border:1px solid var(--border);border-radius:16px;padding:16px;display:grid;place-items:center;transition: transform 0.3s ease;}
+.map:hover{transform: translateY(-3px);}
+.city-list{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.city{padding:12px 14px;background:#fff;border:1px solid var(--border);border-radius:12px;font:500 14px Inter;display:flex;justify-content:space-between;transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;}
+.city:hover{border-color:var(--charcoal); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05);}
+
+.footer{background:#0F1111;color:#E6E8E8;padding:40px 0}
+.footer a{opacity:.7;transition: opacity 0.2s ease, transform 0.2s ease; display: inline-block;}
+.footer a:hover{opacity:1; transform: translateX(2px);}
+.footer-grid{display:grid;gap:28px}
+@media(min-width:900px){.footer-grid{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--border);padding:10px 16px;display:flex;gap:10px;z-index:38}
+@media(min-width:700px){.sticky-cta{display:none}}
+.page{display:none}
+.page.active{display:block}
+.quiz{max-width:720px;margin:0 auto}
+.quiz-header{position:sticky;top:64px;background:var(--stone);padding:16px 0;z-index:30;border-bottom:1px solid var(--border)}
+.progress{height:6px;background:var(--border);border-radius:999px;overflow:hidden}
+.progress-bar{height:100%;background:var(--charcoal);width:16%;transition:.3s ease}
+.quiz-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:24px;margin-top:16px;transition: transform 0.3s ease;}
+.quiz-actions{display:flex;justify-content:space-between;gap:12px;margin-top:18px}
+.upload-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.upload-slot{aspect-ratio:4/3;border:1.5px dashed var(--border);border-radius:14px;display:grid;place-items:center;background:var(--stone);position:relative;overflow:hidden;transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;}
+.upload-slot:hover{transform: translateY(-2px); border-color: var(--charcoal);}
+.upload-slot.has-file{border-style:solid;border-color:var(--sage);background:#fff}
+.upload-slot img{width:100%;height:100%;object-fit:cover}
+.range{font:700 22px Inter}
+.note{background:#FFFBEB;border:1px solid #FDE68A;border-radius:12px;padding:12px 14px;font:400 13px Inter}
+
+/* SCROLL ANIMATION CLASS */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+</style>
+<style id="motion-layer">
+/* ===== Kinetic motion layer ===== */
+html{scroll-behavior:auto}
+
+.nav{transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .35s ease,background .35s ease}
+.nav.nav-scrolled{box-shadow:0 10px 34px rgba(18,20,20,.09)}
+.nav.nav-hidden{transform:translateY(-102%)}
+
+/* Reveal v2 */
+.reveal{opacity:0;transform:translateY(52px) scale(.98);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1);will-change:opacity,transform}
+.reveal.rv-left{transform:translateX(-64px)}
+.reveal.rv-right{transform:translateX(64px)}
+.reveal.rv-scale{transform:translateY(28px) scale(.92)}
+.reveal.is-visible{opacity:1 !important;transform:translateY(0) scale(1) !important}
+
+/* Masked word-by-word heading reveals */
+.w-mask{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.12em;margin-bottom:-.12em}
+.w-inner{display:inline-block;transform:translateY(118%) rotate(2.5deg);transform-origin:0 100%;transition:transform .9s cubic-bezier(.16,1,.3,1)}
+.mask-group.is-visible .w-inner{transform:translateY(0) rotate(0)}
+
+/* Hero entrance */
+.hero-anim{opacity:0}
+body.hero-ready .hero-anim{animation:heroRise 1.05s cubic-bezier(.16,1,.3,1) var(--d,0s) both}
+@keyframes heroRise{from{opacity:0;transform:translateY(48px)}to{opacity:1;transform:translateY(0)}}
+.hero-visual{clip-path:inset(0 0 100% 0 round 24px);transition:clip-path 1.25s cubic-bezier(.16,1,.3,1) .3s,transform .25s ease-out;transform:perspective(1100px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(var(--py,0px))}
+body.hero-ready .hero-visual{clip-path:inset(0 0 0 0 round 24px)}
+body.hero-ready .hero-slide img{animation:imgSettle 2s cubic-bezier(.16,1,.3,1) .35s both}
+@keyframes imgSettle{from{transform:scale(1.16)}to{transform:scale(1)}}
+body.hero-ready .hero-card{animation:heroRise 1.05s cubic-bezier(.16,1,.3,1) 1.05s both,cardFloat 6.5s ease-in-out 2.4s infinite}
+.hero-card:hover{animation-play-state:paused}
+@keyframes cardFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+
+/* Parallax targets (var-driven, hover-safe) */
+.estimator-card{transform:translateY(var(--py,0px))}
+.estimator-card:hover{transform:translateY(calc(var(--py,0px) - 2px))}
+.map{transform:translateY(var(--py,0px))}
+.map:hover{transform:translateY(calc(var(--py,0px) - 3px))}
+
+.btn-primary{position:relative;overflow:hidden;isolation:isolate}
+.btn-primary::after{content:"";position:absolute;inset:-2px;background:linear-gradient(105deg,transparent 42%,rgba(255,255,255,.28) 50%,transparent 58%);transform:translateX(-130%);transition:transform .7s cubic-bezier(.16,1,.3,1);pointer-events:none}
+.btn-primary:hover::after{transform:translateX(130%)}
+.city span:last-child{transition:transform .3s cubic-bezier(.16,1,.3,1)}
+.city:hover span:last-child{transform:translateX(6px)}
+
+@media (prefers-reduced-motion: reduce){
+  .reveal,.w-inner{transition:none!important;opacity:1!important;transform:none!important}
+  .hero-anim{opacity:1}
+  body.hero-ready .hero-anim,body.hero-ready .hero-slide img,body.hero-ready .hero-card{animation:none}
+  .hero-visual{clip-path:none!important}
+}
+</style>
+</head>
+<body class="hero-ready">
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="logo" href="#/" data-nav="home"><span class="logo-mark">K</span> <span>KlimaPro</span></a>
+    <div class="nav-links">
+      <a href="#/solutions" data-i18n="nav.solutions">Lösungen</a>
+      <a href="#/pricing" data-i18n="nav.pricing">Preise</a>
+      <a href="#/installation" data-i18n="nav.installation">Installation</a>
+      <a href="#/maintenance" data-i18n="nav.maintenance">Wartung</a>
+      <a href="#/permits" data-i18n="nav.permits">Bewilligung</a>
+      <a href="#/areas" data-i18n="nav.areas">Gebiet</a>
+      <a href="#/faq" data-i18n="nav.faq">FAQ</a>
+    </div>
+    <div class="nav-actions">
+      <div class="lang-switch" aria-label="Language">
+        <button id="btn-en">EN</button><button id="btn-de" class="active">DE</button>
+      </div>
+      <a href="tel:+41779743914" class="btn btn-ghost btn-small" style="display:none" id="nav-phone">077 974 39 14</a>
+      <button onclick="openEstimate()" class="btn btn-primary btn-small" data-i18n="nav.cta">Offerte anfordern</button>
+      <button class="hamburger" id="ham" aria-label="menu">≡</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#/solutions" data-i18n="nav.solutions">Lösungen</a>
+    <a href="#/pricing" data-i18n="nav.pricing">Preise</a>
+    <a href="#/installation" data-i18n="nav.installation">Installation</a>
+    <a href="#/maintenance" data-i18n="nav.maintenance">Wartung</a>
+    <a href="#/permits" data-i18n="nav.permits">Bewilligung</a>
+    <a href="#/areas" data-i18n="nav.areas">Gebiet</a>
+    <a href="#/faq" data-i18n="nav.faq">FAQ</a>
+    <a href="#/contact" data-i18n="nav.contact">Kontakt</a>
+  </div>
+</nav>
+
+<!-- HOME -->
+<main id="page-home" class="page active">
+  <section class="hero container">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow hero-anim" data-i18n="hero.eyebrow" style="--d: 0.05s;">Greater Zurich • Wohnung &amp; kleines Gewerbe</div>
+        <h1 data-i18n="hero.h1" data-split-done="1" class="mask-group is-visible"><span class="w-mask"><span class="w-inner" style="transition-delay: 0ms;">Klimaanlage</span></span> <em><span class="w-mask"><span class="w-inner" style="transition-delay: 90ms;">inkl.</span></span> <span class="w-mask"><span class="w-inner" style="transition-delay: 135ms;">Montage</span></span> <span class="w-mask"><span class="w-inner" style="transition-delay: 180ms;">&amp;</span></span> <span class="w-mask"><span class="w-inner" style="transition-delay: 225ms;">Service.</span></span></em></h1>
+        <p class="hero-sub hero-anim" data-i18n="hero.sub" style="--d: 0.45s;">Sagen Sie uns, was gekühlt werden soll. Wir empfehlen das passende System, übernehmen die Installation und kümmern uns danach darum. Kein Katalog, kein Fachchinesisch.</p>
+        <div class="hero-ctas hero-anim" style="--d: 0.58s;">
+          <button onclick="openEstimate()" class="btn btn-primary" data-i18n="hero.cta1">Offerte in 2 Min. anfordern →</button>
+        </div>
+        <div class="hero-proof">
+          <span class="pill hero-anim" style="--d: 0.7s;">✓ <span data-i18n="hero.pill1">Festpreis-Offerte</span></span>
+          <span class="pill hero-anim" style="--d: 0.7999999999999999s;">✓ <span data-i18n="hero.pill2">Geprüfte Installationspartner</span></span>
+          <span class="pill hero-anim" style="--d: 0.8999999999999999s;">✓ <span data-i18n="hero.pill3">Markengeräte • Garantie</span></span>
+        </div>
+      </div>
+      <div class="hero-visual carousel-wrap" data-parallax="-16" style="--py: 2.9px; --ry: 0deg; --rx: 0deg;">
+        <button class="carousel-btn prev" id="heroPrev">‹</button>
+        <button class="carousel-btn next" id="heroNext">›</button>
+        <div class="hero-carousel" id="heroCarousel">
+          <div class="hero-slide"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Modern Swiss apartment"></div>
+          <div class="hero-slide"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" alt="Living room with AC"></div>
+          <div class="hero-slide"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea" alt="House with outdoor unit"></div>
+          <div class="hero-slide"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f" alt="Modern interior design"></div>
+          <div class="hero-slide"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6" alt="Cozy apartment room"></div>
+        </div>
+        <div class="hero-dots" id="heroDots"><span class="dot active" data-i="0"></span><span class="dot" data-i="1"></span><span class="dot" data-i="2"></span><span class="dot" data-i="3"></span><span class="dot" data-i="4"></span></div>
+        <div class="hero-card">
+          <div class="hero-card-row"><span data-i18n="hero.card1">Typisches 2-Raum-Projekt</span><span class="pill" style="padding:4px 8px">Winterthur</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:end;margin-top:8px">
+            <div><strong>CHF 6'200</strong><div style="font:400 12px Inter;color:var(--muted)" data-i18n="hero.card2">ab inkl. Standardmontage</div></div>
+            <div style="text-align:right;font:400 12px Inter;color:var(--muted)">Daikin • 1 Tag<br><span data-i18n="hero.card3">inkl. Inbetriebnahme</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" id="how">
+    <div class="section-label" data-i18n="how.label">So funktioniert's</div>
+    <h2 data-i18n="how.h2">Sagen → Prüfen → Offerte → Installieren → <em>Warten</em></h2>
+    <p class="lead" data-i18n="how.sub">Entspannt zurücklehnen. Klima bestellen soll sich wie ein Premium-Service anfühlen, nicht wie Hardware-Stress.</p>
+    <div class="how">
+      <div class="step"><div class="step-top"><div class="step-num">01</div><div class="step-icon">💬</div></div><b data-i18n="how.s1t">Sagen</b><p data-i18n="how.s1d">PLZ, Räume &amp; Grösse in Sekunden.</p></div>
+      <div class="step"><div class="step-top"><div class="step-num">02</div><div class="step-icon">🔍</div></div><b data-i18n="how.s2t">Wir prüfen</b><p data-i18n="how.s2d">Fotos, Leitungsweg, Aussenstandort, Elektro.</p></div>
+      <div class="step"><div class="step-top"><div class="step-num">03</div><div class="step-icon">📄</div></div><b data-i18n="how.s3t">Festofferte</b><p data-i18n="how.s3d">Gerät, Montage &amp; Extras klar ausgewiesen.</p></div>
+      <div class="step"><div class="step-top"><div class="step-num">04</div><div class="step-icon">🔧</div></div><b data-i18n="how.s4t">Wir installieren</b><p data-i18n="how.s4d">Saubere Profi-Montage &amp; Inbetriebnahme.</p></div>
+      <div class="step"><div class="step-top"><div class="step-num">05</div><div class="step-icon">♡</div></div><b data-i18n="how.s5t">Wir kümmern uns</b><p data-i18n="how.s5d">Optionale Jahreswartung — Sie sorgen sich um nichts.</p></div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div style="max-width:760px">
+      <div class="section-label" data-i18n="problem.label">Warum mit uns</div>
+      <h2 data-i18n="problem.h2">Mit <em>uns</em> vs. alleine.</h2>
+      <p class="lead" data-i18n="problem.lead">Online wirkt Klima einfach — bis Bewilligung, Elektro, Kondensat &amp; Lärm kommen. Wir übernehmen alles.</p>
+    </div>
+    <div class="pros-grid">
+      <div class="pro-card"><b data-i18n="problem.c1t">Alleine machen</b><ul><li><span class="icon">✕</span><span data-i18n="problem.c1a">10+ Modelle, SEER/SCOP — Sie werden zum Experten</span></li><li><span class="icon">✕</span><span data-i18n="problem.c1b">Offerte ohne Check → Mehrkosten</span></li><li><span class="icon">✕</span><span data-i18n="problem.c1c">Sie jagen Elektriker, Bewilligung, STWEG</span></li><li><span class="icon">✕</span><span data-i18n="problem.c1d">Danach kümmert sich niemand</span></li></ul></div>
+      <div class="pro-card"><b data-i18n="problem.c2t">Sorgen, die wir lösen</b><ul><li><span class="icon">◯</span><span data-i18n="problem.c2a">Aussenplatz &amp; Lärm (LSV)</span></li><li><span class="icon">◯</span><span data-i18n="problem.c2b">Bohrung &amp; Leitung — vorher fixiert</span></li><li><span class="icon">◯</span><span data-i18n="problem.c2c">Miete — Vermieter-Merkblatt inkl.</span></li><li><span class="icon">◯</span><span data-i18n="problem.c2d">Wartung, Garantie, Priorität</span></li></ul></div>
+      <div class="pro-card dark"><b data-i18n="problem.c3t">Mit KlimaPro</b><ul><li><span class="icon">✓</span><span data-i18n="problem.c3a">Wir empfehlen — kein Fachchinesisch</span></li><li><span class="icon">✓</span><span data-i18n="problem.c3b">Wir prüfen via Fotos + PLZ, melden Extras vorab</span></li><li><span class="icon">✓</span><span data-i18n="problem.c3c">Wir koordinieren Montage &amp; Elektriker</span></li><li><span class="icon">✓</span><span data-i18n="problem.c3d">Festpreis + Jahrespflege — ein Ansprechpartner</span></li></ul><button onclick="openEstimate()" class="btn btn-primary" style="background:#fff;color:var(--charcoal);margin-top:14px;width:100%" data-i18n="problem.cta">Abklärung starten →</button></div>
+    </div>
+  </section>
+
+  <section class="section container" id="packages">
+    <div class="section-label" data-i18n="packages.label">Einfache Pakete — kein Katalog</div>
+    <h2 data-i18n="packages.h2">Ein, zwei oder drei Räume. <em>Wir dimensionieren.</em></h2>
+    <p class="lead" data-i18n="packages.lead">Jedes Paket inkl. Gerät, Standardmontage und Inbetriebnahme. Mehrarbeit, falls nötig, transparent offeriert.</p>
+    <div class="grid-3">
+      <div class="card"><div style="font:600 12px Inter;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)" data-i18n="packages.p1k">1 Raum • Schlafzimmer / Büro</div><div class="price">CHF 3'500 <span data-i18n="packages.from">ab</span></div><ul><li data-i18n="packages.p1a">1 Innen- + 1 Aussengerät</li><li data-i18n="packages.p1b">Bis 3 m Leitung, 1 Kernbohrung</li><li data-i18n="packages.p1c">Inbetriebnahme &amp; Übergabe</li><li data-i18n="packages.p1d">Herstellergarantie</li></ul><button onclick="openEstimate(1)" class="btn btn-secondary" data-i18n="packages.cta">1-Raum prüfen →</button></div>
+      <div class="card card-popular"><span class="badge" data-i18n="packages.popular">Meist gewählt</span><div style="font:600 12px Inter;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)" data-i18n="packages.p2k">2 Räume • Wohnung</div><div class="price">CHF 6'200 <span data-i18n="packages.from">ab</span></div><ul><li data-i18n="packages.p2a">2 Innen- + 1 Aussengerät</li><li data-i18n="packages.p2b">Bis 3 m pro Gerät, 1–2 Bohrungen</li><li data-i18n="packages.p2c">Kondensatführung inkl.*</li><li data-i18n="packages.p2d">Flüstermodus</li></ul><button onclick="openEstimate(2)" class="btn btn-primary" data-i18n="packages.cta2">2-Raum prüfen →</button></div>
+      <div class="card"><div style="font:600 12px Inter;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)" data-i18n="packages.p3k">3 Räume • Haus / grosse Wohnung</div><div class="price">CHF 8'500 <span data-i18n="packages.from">ab</span></div><ul><li data-i18n="packages.p3a">3 Innen- + 1 Aussengerät</li><li data-i18n="packages.p3b">Bis 3 m pro Gerät</li><li data-i18n="packages.p3c">Heizen optional</li><li data-i18n="packages.p3d">Prioritätswartung</li></ul><button onclick="openEstimate(3)" class="btn btn-secondary" data-i18n="packages.cta3">3-Raum prüfen →</button></div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="estimator">
+      <div>
+        <h3 data-i18n="est.h2">Richtpreis — <em style="font-family:'Instrument Serif',serif;font-weight:400">ohne Rätselraten</em></h3>
+        <p class="estimator-sub" data-i18n="est.sub">3 kurze Fragen und Sie sehen den typischen Bereich für ähnliche Wohnungen in Ihrer Nähe. Exakt nach Foto-Check.</p>
+        <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap">
+          <button onclick="openEstimate()" class="btn" style="background:#fff;color:var(--charcoal)" data-i18n="est.cta">2-Min. Estimate starten →</button>
+          <span style="font:400 13px Inter;opacity:.7;align-self:center" data-i18n="est.note">Unverbindlich • Antwort innert 24h</span>
+        </div>
+      </div>
+      <div class="estimator-card" data-parallax="24">
+        <div style="font:600 13px Inter" data-i18n="est.teaser">Schnelltest</div>
+        <div style="margin-top:10px">
+          <div style="font:500 13px Inter" data-i18n="est.q1">Wie viele Räume?</div>
+          <div class="chip-grid" id="teaserRooms"><button class="chip active" data-v="1">1</button><button class="chip" data-v="2">2</button><button class="chip" data-v="3">3</button><button class="chip" data-v="4">4</button><button class="chip" data-v="5+">5+</button></div>
+          <div style="font:500 13px Inter" data-i18n="est.q2">Objekt</div>
+          <div class="chip-grid" id="teaserProp"><button class="chip active" data-v="flat">Wohnung</button><button class="chip" data-v="house">Haus</button><button class="chip" data-v="office">Gewerbe</button></div>
+          <div class="range" id="teaserPrice">CHF 3'500 — 4'900</div>
+          <div style="font:400 12px Inter;color:var(--muted)" data-i18n="est.teaserNote">Typischer Bereich inkl. Standardmontage • live</div>
+          <button onclick="openEstimate()" class="btn btn-primary" style="width:100%;margin-top:12px" data-i18n="est.cta2">Exakte Offerte anfordern →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="split">
+      <div>
+        <div class="section-label" data-i18n="incl.label">Transparenz</div>
+        <h2 data-i18n="incl.h2">Was inkl. ist. <em>Was extra kosten kann.</em></h2>
+        <p class="lead" data-i18n="incl.lead">Keine Überraschungsrechnung. Wir melden Extras vorab.</p>
+        <table class="table" style="margin-top:16px">
+          <tbody><tr><th data-i18n="incl.included">Inklusive (Standard)</th><th data-i18n="incl.value">Wert</th></tr>
+          <tr><td data-i18n="incl.r1">Bis 3 m Kältemittelleitung pro Innengerät</td><td>✓</td></tr>
+          <tr><td data-i18n="incl.r2">1 Kernbohrung (bis 300 mm)</td><td>✓</td></tr>
+          <tr><td data-i18n="incl.r3">Kondensatschlauch zum Ablauf</td><td>✓</td></tr>
+          <tr><td data-i18n="incl.r4">Montage, Vakuum, Inbetriebnahme</td><td>✓</td></tr>
+          <tr><td data-i18n="incl.r5">Instruktion &amp; Übergabe</td><td>✓</td></tr>
+        </tbody></table>
+      </div>
+      <div>
+        <table class="table" style="margin-top:44px">
+          <tbody><tr><th data-i18n="incl.extra">Mögliche Zusatzarbeiten</th><th data-i18n="incl.range">Bereich</th></tr>
+          <tr><td data-i18n="incl.e1">Zusätzliche Leitungslänge</td><td>CHF 90–140/m</td></tr>
+          <tr><td data-i18n="incl.e2">Extra Bohrung / Spitzarbeiten</td><td>CHF 180–320</td></tr>
+          <tr><td data-i18n="incl.e3">Kondensatpumpe</td><td>CHF 280–450</td></tr>
+          <tr><td data-i18n="incl.e4">Elektrozuleitung ab Verteilung</td><td data-i18n="incl.e4v">Nach Abklärung</td></tr>
+          <tr><td data-i18n="incl.e5">Gerüst / Hebebühne (über 3 m)</td><td data-i18n="incl.e5v">Nach Aufwand</td></tr>
+        </tbody></table>
+        <div class="note" style="margin-top:12px" data-i18n="incl.note">Wir beurteilen Extras anhand Ihrer Fotos. Sie geben die Festofferte frei.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="maintenance split" style="align-items:center">
+      <div>
+        <div class="section-label" data-i18n="maint.label">Wartung</div>
+        <h2 data-i18n="maint.h2">Schützen Sie Ihre Investition.</h2>
+        <p class="lead" style="color:#374151" data-i18n="maint.lead">Jährliche Kontrolle hält die Anlage effizient, hygienisch und leise. Filter, Hygiene-Check, Leistungstest, Prioritätsservice.</p>
+        <ul style="margin-top:14px;display:grid;gap:8px;list-style:none">
+          <li style="font:500 14px Inter" data-i18n="maint.b1">✓ Jährlicher Besuch • 60–90 Min.</li>
+          <li style="font:500 14px Inter" data-i18n="maint.b2">✓ Reinigung &amp; Hygiene • F-Gas-konform</li>
+          <li style="font:500 14px Inter" data-i18n="maint.b3">✓ Priorität bei Störung im Sommer</li>
+        </ul>
+        <a href="#/maintenance" class="btn btn-primary" style="margin-top:16px" data-i18n="maint.cta">Wartung ansehen →</a>
+      </div>
+      <div class="card" style="text-align:center">
+        <div style="font:600 12px Inter;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)" data-i18n="maint.pricek">Jahrespflege</div>
+        <div class="price" style="margin:6px 0">CHF 189 <span data-i18n="maint.per">/ Innengerät / Jahr</span></div>
+        <div style="font:400 13px Inter;color:var(--muted)" data-i18n="maint.incl">inkl. Anfahrt im Servicegebiet • inkl. MwSt.</div>
+        <button onclick="openEstimate()" class="btn btn-secondary" style="margin-top:14px;width:100%" data-i18n="maint.cta2">Zur Offerte hinzufügen</button>
+        <div style="font:400 12px Inter;color:var(--muted);margin-top:8px" data-i18n="maint.reminder">Wir erinnern Sie jeden Frühling.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="section-label" data-i18n="cases.label">Referenzen</div>
+    <h2 data-i18n="cases.h2">Echte Installationen. <em>Ab Sommer 2026.</em></h2>
+    <div class="grid-3">
+      <div class="card"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" style="border-radius:12px;aspect-ratio:4/3;object-fit:cover" alt=""><b data-i18n="cases.c1t">2-Zimmer-Wohnung • Zürich 8004</b><p style="color:var(--muted);font:400 13px Inter" data-i18n="cases.c1d">2 innen + 1 aussen auf Balkon • 7 m Leitung • Balkonmontage • 1 Tag</p></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d" style="border-radius:12px;aspect-ratio:4/3;object-fit:cover" alt=""><b data-i18n="cases.c2t">1 Raum • Home-Office • Dübendorf</b><p style="color:var(--muted);font:400 13px Inter" data-i18n="cases.c2d">Leise 19 dB(A) • Kondensatpumpe • Elektro erweitert • 6 Std.</p></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea" style="border-radius:12px;aspect-ratio:4/3;object-fit:cover" alt=""><b data-i18n="cases.c3t">3-Zimmer-Haus • Uster</b><p style="color:var(--muted);font:400 13px Inter" data-i18n="cases.c3d">3 Räume + Heizen • Aussengerät Gartenseite • 12 m Leitung • Gerüst</p></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" style="border-radius:12px;aspect-ratio:4/3;object-fit:cover" alt=""><b data-i18n="cases.c4t">2-Zimmer Penthouse • Baden 5400</b><p style="color:var(--muted);font:400 13px Inter" data-i18n="cases.c4d">2 Innengeräte + Terrasse Aussenmontage • 9 m Leitung • Flüstermodus</p></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6" style="border-radius:12px;aspect-ratio:4/3;object-fit:cover" alt=""><b data-i18n="cases.c5t">1-Zimmer Schlafzimmer • Aarau 5000</b><p style="color:var(--muted);font:400 13px Inter" data-i18n="cases.c5d">Single-Split System • Kernbohrung Backstein • 1 Tag Montage</p></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f" style="border-radius:12px;aspect-ratio:4/3;object-fit:cover" alt=""><b data-i18n="cases.c6t">4-Zimmer Villa • Winterthur 8400</b><p style="color:var(--muted);font:400 13px Inter" data-i18n="cases.c6d">Multi-Split Wärmepumpensystem • 4 Innengeräte • Wandmontage</p></div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="section-label" data-i18n="areas.label">Servicegebiet</div>
+    <h2 data-i18n="areas.h2">Greater Zurich + Aargau</h2>
+    <p class="lead" data-i18n="areas.lead">Zürich Kern + grosser Teil Aargau — Zürich, Limmattal, Baden, Aarau, Lenzburg, Brugg und Umgebung. Wir prüfen PLZ live.</p>
+    <div class="service-map" style="margin-top:16px">
+      <div class="map" data-parallax="20">
+        <div style="text-align:center">
+          <div style="font:700 18px Inter">Zurich — Aargau</div>
+          <div style="font:400 13px Inter;color:var(--muted)" data-i18n="areas.mapNote">~45 km Radius • Zürich + Aargau</div>
+          <div style="margin-top:14px;display:flex;gap:6px;flex-wrap:wrap;justify-content:center"><span class="pill">8000 Zurich</span><span class="pill">5400 Baden</span><span class="pill">5000 Aarau</span><span class="pill">5600 Lenzburg</span><span class="pill">5200 Brugg</span><span class="pill">4800 Zofingen</span></div>
+          <svg viewBox="0 0 300 180" width="300" height="180" style="margin-top:12px"><ellipse cx="150" cy="90" rx="85" ry="65" fill="none" stroke="#8A9A8E" stroke-width="2" stroke-dasharray="6 6"></ellipse><circle cx="150" cy="90" r="4" fill="#121414"></circle><text x="150" y="18" text-anchor="middle" font-size="10" fill="#6B7280">Zurich + Aargau</text></svg>
+        </div>
+      </div>
+      <div>
+        <div class="city-list">
+          <a class="city" href="#/areas/zurich"><span>Zürich</span><span>→</span></a>
+          <a class="city" href="#/areas/winterthur"><span>Winterthur</span><span>→</span></a>
+          <a class="city" href="#/areas/uster"><span>Uster</span><span>→</span></a>
+          <a class="city" href="#/areas/dietikon"><span>Dietikon</span><span>→</span></a>
+          <a class="city" href="#/areas/baden"><span>Baden</span><span>→</span></a>
+          <a class="city" href="#/areas/aarau"><span>Aarau</span><span>→</span></a>
+          <a class="city" href="#/areas/lenzburg"><span>Lenzburg</span><span>→</span></a>
+          <a class="city" href="#/areas/brugg"><span>Brugg</span><span>→</span></a>
+          <a class="city" href="#/areas/zofingen"><span>Zofingen</span><span>→</span></a>
+          <a class="city" href="#/areas/wohlen"><span>Wohlen</span><span>→</span></a>
+          <a class="city" href="#/areas/schlieren"><span>Schlieren</span><span>→</span></a>
+          <a class="city" href="#/areas/horgen"><span>Horgen</span><span>→</span></a>
+        </div>
+        <div style="margin-top:12px; display:flex; gap:8px;">
+          <input type="text" id="areaPlzInput" class="input" placeholder="PLZ eingeben z.B. 5400" style="max-width:180px;">
+          <button onclick="checkMainPlz()" class="btn btn-secondary" style="white-space:nowrap" data-i18n="areas.cta">PLZ prüfen →</button>
+        </div>
+        <div id="areaPlzResult" style="margin-top:8px; font:500 13px Inter; display:none;"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" style="padding-top:0">
+    <h2 style="font-size:24px" data-i18n="faq.h2">Häufige Fragen</h2>
+    <div style="display:grid;gap:10px;margin-top:14px">
+      <details class="faq-item" open=""><summary><span data-i18n="faq.q1">Brauche ich eine Bewilligung fürs Aussengerät?</span><span>+</span></summary><p data-i18n="faq.a1">Möglicherweise. Abhängig von Gemeinde, Zone, Gebäude und Stockwerkeigentum. Aussengeräte betreffen Lärm (LSV) und Ortsbild. Wir beurteilen anhand Ihrer Fotos und klären mit Gemeinde/Verwaltung. Keine Rechtsversprechen ohne Prüfung Ihrer Adresse.</p></details>
+      <details class="faq-item"><summary><span data-i18n="faq.q2">Was kostet es wirklich?</span><span>+</span></summary><p data-i18n="faq.a2">Ab CHF 3'500 (1 Raum), CHF 6'200 (2 Räume), CHF 8'500 (3 Räume) inkl. Standardmontage und MwSt. Extras (lange Leitung, Pumpe, Elektro, Gerüst) separat nach Foto-Prüfung. Sie geben frei.</p></details>
+      <details class="faq-item"><summary><span data-i18n="faq.q3">Wie laut ist es? Kann ich schlafen?</span><span>+</span></summary><p data-i18n="faq.a3">Innengeräte 19–22 dB(A) im Flüstermodus — sehr leise. Aussengeräte ~45–52 dB(A). Wir platzieren LSV-konform.</p></details>
+      <details class="faq-item"><summary><span data-i18n="faq.q4">Kann es auch heizen?</span><span>+</span></summary><p data-i18n="faq.a4">Ja, alle Splitgeräte sind Wärmepumpen und heizen effizient in der Übergangszeit.</p></details>
+      <details class="faq-item"><summary><span data-i18n="faq.q5">Ich miete. Geht das?</span><span>+</span></summary><p data-i18n="faq.a5">Nur mit schriftlicher Zustimmung Vermieter/STWEG. Wir liefern ein Merkblatt für die Anfrage.</p></details>
+      <details class="faq-item"><summary><span data-i18n="faq.q6">Wie schnell Installation?</span><span>+</span></summary><p data-i18n="faq.a6">Nach Festofferte: meist 2–4 Wochen je nach Saison/Lager. Montage selbst meist 1 Tag.</p></details>
+    </div>
+    <a href="#/faq" style="font:600 14px Inter;display:inline-block;margin-top:12px;text-decoration:underline" data-i18n="faq.more">Alle FAQs ansehen →</a>
+  </section>
+
+  <!-- TRUST BAR SECTION -->
+  <section class="trust">
+    <div class="container trust-grid">
+      <div class="trust-item"><span>◎</span><div><b data-i18n="trust.t1">Schweizer Servicegebiet</b><p data-i18n="trust.d1">Zürich + Aargau. Wir kennen Gebäude &amp; Regeln.</p></div></div>
+      <div class="trust-item"><span>◆</span><div><b data-i18n="trust.t2">Geprüfter Installationspartner</b><p data-i18n="trust.d2">Zertifizierte Kälte + konzessionierter Elektriker (ESTI).</p></div></div>
+      <div class="trust-item"><span>▣</span><div><b data-i18n="trust.t3">Bewährte Marken</b><p data-i18n="trust.d3">Daikin, Mitsubishi Electric — zuverlässig &amp; leise.</p></div></div>
+      <div class="trust-item"><span>✓</span><div><b data-i18n="trust.t4">Transparente Offerte</b><p data-i18n="trust.d4">Inklusive vs. mögliche Extras — schriftlich.</p></div></div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--charcoal);color:#fff;border-radius:24px;margin:32px 16px 24px">
+    <div class="container" style="padding:40px 24px;text-align:center">
+      <h2 style="color:#fff" data-i18n="final.h2">Bereit für kühle, leise Räume?</h2>
+      <p style="opacity:.75;max-width:600px;margin:8px auto 0" data-i18n="final.sub">Kostenlose, unverbindliche Abklärung. Ein paar Fragen — wir machen den Rest.</p>
+      <div style="margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><button onclick="openEstimate()" class="btn" style="background:#fff;color:var(--charcoal)" data-i18n="final.cta">Meine Einschätzung holen →</button><a href="tel:+41779743914" class="btn" style="border:1px solid rgba(255,255,255,.3);color:#fff" data-i18n="final.call">Oder 077 974 39 14 anrufen</a></div>
+      <div style="font:400 12px Inter;opacity:.6;margin-top:10px" data-i18n="final.note">Mo–Fr 9–17h • Antwort innert 24h</div>
+    </div>
+  </section>
+</main>
+
+<!-- ESTIMATE -->
+<main id="page-estimate" class="page">
+  <div class="quiz-header"><div class="container"><div style="display:flex;justify-content:space-between;align-items:center"><b data-i18n="quiz.title">Estimate — 2 Minuten</b><span style="font:400 13px Inter;color:var(--muted)"><span class="stepLabel">1</span> / 6</span></div><div class="progress" style="margin-top:10px"><div class="progress-bar modal-progress-bar"></div></div></div></div>
+  <div class="container" style="padding:24px"><div class="quiz">
+    <!-- step 1 -->
+    <div class="quiz-card" data-step="1">
+      <div class="section-label" data-i18n="quiz.s1k">Schritt 1 • Kontext</div>
+      <h2 style="font-size:22px" data-i18n="quiz.s1h">Was kühlen Sie?</h2>
+      <div style="margin-top:14px">
+        <div style="font:500 13px Inter" data-i18n="quiz.qType">Gebäudetyp</div>
+        <div class="chip-grid" data-group="type">
+          <button class="chip" data-v="apartment"><span class="chip-icon">🏢</span> <span data-i18n="quiz.apartment">Wohnung</span></button>
+          <button class="chip" data-v="house"><span class="chip-icon">🏡</span> <span data-i18n="quiz.house">Haus</span></button>
+          <button class="chip" data-v="office"><span class="chip-icon">💼</span> <span data-i18n="quiz.office">Geschäft / Büro</span></button>
+          <button class="chip" data-v="other"><span class="chip-icon">📦</span> <span data-i18n="quiz.other">Andere</span></button>
+        </div>
+        <div style="font:500 13px Inter;margin-top:12px" data-i18n="quiz.qRooms">Anzahl Räume</div>
+        <div class="chip-grid" data-group="rooms"><button class="chip" data-v="1">1</button><button class="chip" data-v="2">2</button><button class="chip" data-v="3">3</button><button class="chip" data-v="4">4</button><button class="chip" data-v="5+">5+</button></div>
+        <div style="font:500 13px Inter;margin-top:12px" data-i18n="quiz.qWhich">Welche Räume?</div>
+        <div class="chip-grid" data-group="which" data-multi="">
+          <button class="chip" data-v="living"><span class="chip-icon">🛋️</span> <span data-i18n="quiz.living">Wohnzimmer</span></button>
+          <button class="chip" data-v="bed"><span class="chip-icon">🛏️</span> <span data-i18n="quiz.bed">Schlafzimmer</span></button>
+          <button class="chip" data-v="office2"><span class="chip-icon">💻</span> <span data-i18n="quiz.homeoffice">Büro</span></button>
+          <button class="chip" data-v="multi"><span class="chip-icon">✨</span> <span data-i18n="quiz.multi">Mehrere</span></button>
+        </div>
+      </div>
+      <div class="quiz-actions"><span></span><button class="btn btn-primary" onclick="nextStep()">Weiter →</button></div>
+    </div>
+    <!-- step 2 -->
+    <div class="quiz-card" data-step="2" style="display:none">
+      <div class="section-label">Schritt 2 • Objekt</div>
+      <h2 style="font-size:22px" data-i18n="quiz.s2h">Zum Objekt</h2>
+      <div style="display:grid;gap:12px;margin-top:14px">
+        <div><div style="font:500 13px Inter" data-i18n="quiz.own">Eigentum oder Miete?</div><div class="chip-grid" data-group="own"><button class="chip" data-v="own" data-i18n="quiz.ownYes">Eigentum</button><button class="chip" data-v="rent" data-i18n="quiz.rent">Miete</button></div><div class="note rentNote" style="display:none;margin-top:8px" data-i18n="quiz.rentNote">Schriftliche Vermieter-/STWEG-Zustimmung nötig. Wir liefern ein Merkblatt.</div></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <label><span style="font:500 13px Inter" data-i18n="quiz.floor">Etage</span><select class="input" data-field="floor"><option value="">Wählen</option><option>EG</option><option>1. OG</option><option>2. OG</option><option>3. OG+</option><option>Attika</option></select></label>
+          <label><span style="font:500 13px Inter" data-i18n="quiz.size">Raumgrösse (m²)</span><input class="input" data-field="size" placeholder="z.B. 20 oder Weiss nicht"></label>
+        </div>
+        <label><span style="font:500 13px Inter">PLZ / Postleitzahl *</span><input class="input" name="postal-code" autocomplete="postal-code" placeholder="8001" inputmode="numeric" data-field="plz" oninput="validatePlzField(this)"><span id="plzValidationMsg" style="font:500 12px Inter; margin-top:4px; display:block;" data-i18n="quiz.plzNote">Wir validieren im Servicegebiet Greater Zurich und Aargau.</span></label>
+      </div>
+      <div class="quiz-actions"><button class="btn btn-secondary" onclick="prevStep()">← Zurück</button><button class="btn btn-primary" onclick="nextStep()">Weiter →</button></div>
+    </div>
+    <!-- step 3 -->
+    <div class="quiz-card" data-step="3" style="display:none">
+      <div class="section-label">Schritt 3 • Installation</div>
+      <h2 style="font-size:22px" data-i18n="quiz.s3h">Aussengerät &amp; Wege</h2>
+      <div style="display:grid;gap:12px;margin-top:14px">
+        <div><div style="font:500 13px Inter" data-i18n="quiz.balcony">Balkon / Terrasse / Aussenbereich?</div><div class="chip-grid" data-group="balcony"><button class="chip" data-v="yes" data-i18n="quiz.yes">Ja</button><button class="chip" data-v="no" data-i18n="quiz.no">Nein</button></div></div>
+        <div><div style="font:500 13px Inter" data-i18n="quiz.outdoor">Wo könnte Aussengerät stehen?</div><div class="chip-grid" data-group="outdoor"><button class="chip" data-v="balcony" data-i18n="quiz.ob1">Balkon</button><button class="chip" data-v="facade" data-i18n="quiz.ob2">Fassade</button><button class="chip" data-v="roof" data-i18n="quiz.ob3">Flachdach</button><button class="chip" data-v="garden" data-i18n="quiz.ob4">Garten</button><button class="chip" data-v="unknown" data-i18n="quiz.unknown">Weiss nicht</button></div></div>
+        <div><div style="font:500 13px Inter" data-i18n="quiz.pipe">Leitungsweg geschätzt</div><div class="chip-grid" data-group="pipe"><button class="chip" data-v="lt3m">&lt;3 m</button><button class="chip" data-v="3-8m">3–8 m</button><button class="chip" data-v="gt8m">&gt;8 m</button><button class="chip" data-v="unknown" data-i18n="quiz.unknown">Weiss nicht</button></div></div>
+        <div><div style="font:500 13px Inter" data-i18n="quiz.electro">Stromanschluss vorhanden?</div><div class="chip-grid" data-group="electro"><button class="chip" data-v="yes" data-i18n="quiz.yes">Ja</button><button class="chip" data-v="no" data-i18n="quiz.no">Nein</button><button class="chip" data-v="unknown" data-i18n="quiz.unknown">Weiss nicht</button></div></div>
+      </div>
+      <div class="quiz-actions"><button class="btn btn-secondary" onclick="prevStep()">← Zurück</button><button class="btn btn-primary" onclick="nextStep()">Weiter →</button></div>
+    </div>
+    <!-- step 4 -->
+    <div class="quiz-card" data-step="4" style="display:none">
+      <div class="section-label">Schritt 4 • Hauptziel</div>
+      <h2 style="font-size:22px" data-i18n="quiz.s4h">Hauptziel</h2>
+      <div class="chip-grid" data-group="goal"><button class="chip" data-v="cool" data-i18n="quiz.cool">Nur Kühlen</button><button class="chip" data-v="both" data-i18n="quiz.both">Kühlen + Heizen</button></div>
+      <label style="display:block;margin-top:14px"><span style="font:500 13px Inter" data-i18n="quiz.notes">Optionale Notizen</span><textarea class="input" rows="3" data-field="notes" placeholder="Zugang, Baujahr, STWEG..."></textarea></label>
+      <div class="quiz-actions"><button class="btn btn-secondary" onclick="prevStep()">← Zurück</button><button class="btn btn-primary" onclick="nextStep()">Weiter →</button></div>
+    </div>
+    <!-- step 5 photos -->
+    <div class="quiz-card" data-step="5" style="display:none">
+      <div class="section-label">Schritt 5 • Fotos</div>
+      <h2 style="font-size:22px" data-i18n="quiz.s5h">Fotos hochladen — erhöht Genauigkeit</h2>
+      <p style="font:400 13px Inter;color:var(--muted)" data-i18n="quiz.s5d">Handy-Fotos reichen. Wir brauchen: Raum, möglicher Aussenstandort, Elektroverteiler, Aussenwand.</p>
+      <div class="upload-grid">
+        <label class="upload-slot" data-slot="room"><input type="file" accept="image/*" hidden=""><span>＋ <span data-i18n="quiz.up1">Raum</span></span></label>
+        <label class="upload-slot" data-slot="outdoor"><input type="file" accept="image/*" hidden=""><span>＋ <span data-i18n="quiz.up2">Aussenstandort</span></span></label>
+        <label class="upload-slot" data-slot="electro"><input type="file" accept="image/*" hidden=""><span>＋ <span data-i18n="quiz.up3">Elektro</span></span></label>
+        <label class="upload-slot" data-slot="wall"><input type="file" accept="image/*" hidden=""><span>＋ <span data-i18n="quiz.up4">Aussenwand</span></span></label>
+      </div>
+      <div class="note" style="margin-top:10px" data-i18n="quiz.skipNote">Sie können überspringen, aber ohne Fotos +15% Preisunsicherheit. Mobil: tippen zum Fotografieren.</div>
+      <div class="quiz-actions"><button class="btn btn-secondary" onclick="prevStep()">← Zurück</button><button class="btn btn-primary" onclick="nextStep()">Weiter →</button></div>
+    </div>
+    <!-- step 6 contact + price -->
+    <div class="quiz-card" data-step="6" style="display:none">
+      <div class="section-label">Schritt 6 • Ihre Offerte</div>
+      <div style="background:var(--sage-light);border-radius:14px;padding:14px;border:1px solid #DCE3DC">
+        <div style="font:600 12px Inter;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)" data-i18n="quiz.estimateLabel">Richtbereich für ähnliche Projekte</div>
+        <div class="range finalRange">CHF 6'200 — 7'100</div>
+        <div style="font:400 12px Inter;color:var(--muted)" data-i18n="quiz.estimateNote">Exakter Preis nach Foto-Prüfung. Faktoren: Leitung, Bohrung, Elektro, Kondensat, Zugang, Bewilligung.</div>
+      </div>
+      <div style="display:grid;gap:10px;margin-top:14px">
+        <label><span style="font:500 13px Inter">Name *</span><input class="input cName" name="name" autocomplete="name" placeholder="Max Muster" data-field="cName"></label>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <label><span style="font:500 13px Inter">Telefon *</span><input class="input cPhone" name="tel" autocomplete="tel" type="tel" placeholder="077 974 39 14" data-field="cPhone"></label>
+          <label><span style="font:500 13px Inter">E-Mail</span><input class="input cEmail" name="email" autocomplete="email" type="email" placeholder="sie@mail.ch" data-field="cEmail"></label>
+        </div>
+        <label style="display:flex;gap:8px;align-items:flex-start;font:400 13px Inter"><input type="checkbox" class="consent" name="consent" data-field="consent"> <span data-i18n="quiz.consent">Ich willige ein, kontaktiert zu werden und akzeptiere die Datenschutzbestimmungen (nDSG). *</span></label>
+      </div>
+      <div class="quiz-actions"><button class="btn btn-secondary" onclick="prevStep()">← Zurück</button><button class="btn btn-primary submitBtn" onclick="submitLead()" data-i18n="quiz.submit">Exakte Offerte anfordern →</button></div>
+      <div class="submitMsg" style="margin-top:12px;font:500 14px Inter;display:none"></div>
+    </div>
+  </div></div>
+</main>
+
+<!-- GENERIC PAGE TEMPLATE -->
+<main id="page-generic" class="page">
+  <div class="container section"><a href="#/" style="font:500 14px Inter;text-decoration:underline" data-i18n="generic.back">← Zurück zur Startseite</a><div id="genericContent" style="margin-top:16px"></div></div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div><div class="logo" style="color:#fff"><span class="logo-mark" style="background:#fff;color:#111">K</span> KlimaPro</div><p style="opacity:.6;font:400 13px Inter;margin-top:10px" data-i18n="footer.tag">Klimaanlage inkl. Montage &amp; Wartung. Greater Zurich.</p><p style="opacity:.5;font:400 12px Inter;margin-top:10px">© 2026 KlimaPro • Bootstrapped • Greater Zurich</p></div>
+    <div><b style="font:600 13px Inter">Erkunden</b><div style="display:grid;gap:8px;margin-top:10px;font:400 14px Inter"><a href="#/solutions" data-i18n="nav.solutions">Lösungen</a><a href="#/pricing" data-i18n="nav.pricing">Preise</a><a href="#/installation" data-i18n="nav.installation">Installation</a><a href="#/maintenance" data-i18n="nav.maintenance">Wartung</a></div></div>
+    <div><b style="font:600 13px Inter">Service</b><div style="display:grid;gap:8px;margin-top:10px;font:400 14px Inter"><a href="#/areas" data-i18n="nav.areas">Gebiet</a><a href="#/permits" data-i18n="nav.permits">Bewilligung</a><a href="#/faq" data-i18n="nav.faq">FAQ</a><a href="#/contact">Kontakt</a></div></div>
+    <div><b style="font:600 13px Inter">Kontakt</b><div style="display:grid;gap:8px;margin-top:10px;font:400 14px Inter"><a href="tel:+41779743914">077 974 39 14</a><a href="mailto:hallo@klimapro.ch">hallo@klimapro.ch</a><a href="https://wa.me/41779743914">WhatsApp</a></div><div style="margin-top:12px;display:flex;gap:8px"><a href="#/privacy" style="font:400 12px Inter" data-i18n="footer.privacy">Datenschutz</a><a href="#/terms" style="font:400 12px Inter" data-i18n="footer.terms">AGB</a><a href="#/imprint" style="font:400 12px Inter" data-i18n="footer.imprint">Impressum</a></div></div>
+  </div>
+</footer>
+
+<div class="sticky-cta"><a href="tel:+41779743914" class="btn btn-secondary" style="flex:1" data-i18n="sticky.call">Anrufen</a><button onclick="openEstimate()" class="btn btn-primary" style="flex:1.4" data-i18n="sticky.quote">Offerte</button></div>
+
+<!-- ESTIMATE MODAL -->
+<div class="modal" id="estimateModal" onclick="if(event.target===this) closeEstimate()">
+  <div class="modal-panel">
+    <div class="modal-head"><b data-i18n="quiz.title">Estimate — 2 Minuten</b><button onclick="closeEstimate()" class="btn btn-ghost btn-small">✕</button></div>
+    <div style="padding:12px 16px;background:var(--stone)"><div class="progress"><div class="progress-bar" id="modalProgress"></div></div><div style="font:400 12px Inter;color:var(--muted);margin-top:6px;text-align:right"><span id="modalStep">1</span> / 6</div></div>
+    <div id="modalQuizContainer" style="padding:0 16px 16px"></div>
+  </div>
+</div>
+
+<script>
+const dict={
+en:{
+"nav.solutions":"Solutions","nav.pricing":"Pricing","nav.installation":"Installation","nav.maintenance":"Maintenance","nav.permits":"Permits","nav.areas":"Areas","nav.faq":"FAQ","nav.contact":"Contact","nav.cta":"Get estimate",
+"hero.eyebrow":"Greater Zurich • Residential & Small Business","hero.h1":"Air conditioning <em>supplied, professionally installed & maintained.</em>","hero.sub":"Tell us about your home. We recommend the right system, handle installation and look after it afterwards. No catalogue, no jargon.","hero.cta1":"Get my estimate in 2 min →","hero.cta2":"See how it works","hero.pill1":"Fixed-price quote","hero.pill2":"Qualified partner installers","hero.pill3":"Brand equipment • Warranty","hero.card1":"Typical 2-room project","hero.card2":"from incl. standard installation","hero.card3":"incl. commissioning",
+"trust.t1":"Swiss service area","trust.d1":"Zurich + Aargau. We know local buildings & rules.","trust.t2":"Qualified installation partner","trust.d2":"Certified refrigeration + licensed electrician (ESTI).","trust.t3":"Established brands","trust.d3":"Daikin, Mitsubishi Electric — selected for reliability.","trust.t4":"Transparent quotation","trust.d4":"What's included vs. possible extras — in writing.",
+"problem.label":"Why with us","problem.h2":"Doing it <em>with us</em> vs. on your own.","problem.lead":"AC looks simple online — until permits, electrics, drainage and noise rules appear. We handle it end-to-end.","problem.c1t":"Doing it yourself","problem.c1a":"10+ models, SEER/SCOP jargon — you become the expert","problem.c1b":"Quote without site check → surprise costs","problem.c1c":"You chase electrician, permits, STWEG","problem.c1d":"No one maintains it afterwards","problem.c2t":"Common worries we solve","problem.c2a":"Outdoor unit placement & noise (LSV)","problem.c2b":"Drilling & pipe length — fixed before start","problem.c2c":"Rented flat — landlord sheet included","problem.c2d":"Maintenance, warranty, priority service","problem.c3t":"With KlimaPro","problem.c3a":"We recommend the right system — no jargon","problem.c3b":"We assess via photos + PLZ, flag extras upfront","problem.c3c":"We coordinate install & certified electrician","problem.c3d":"Fixed quote + annual care — one contact","problem.cta":"Start assessment →",
+"packages.label":"Simple packages — not a catalogue","packages.h2":"One, two or three rooms. <em>We size it for you.</em>","packages.lead":"Each package includes equipment, standard installation and commissioning. Extra work, if needed, quoted transparently.","packages.p1k":"1 Room • Bedroom / Office","packages.p2k":"2 Rooms • Apartment","packages.p3k":"3 Rooms • House / Larger flat","packages.from":"from","packages.popular":"Most chosen","packages.p1a":"1 indoor + 1 outdoor unit","packages.p1b":"Up to 3 m piping, 1 core drill","packages.p1c":"Commissioning & handover","packages.p1d":"Manufacturer warranty","packages.p2a":"2 indoor + 1 outdoor unit","packages.p2b":"Up to 3 m per unit, 1-2 drills","packages.p2c":"Condensate routing included*","packages.p2d":"Quiet sleep mode","packages.p3a":"3 indoor + 1 outdoor unit","packages.p3b":"Up to 3 m per unit","packages.p3c":"Heating mode optional","packages.p3d":"Priority maintenance","packages.cta":"Check 1-room →","packages.cta2":"Check 2-room →","packages.cta3":"Check 3-room →","packages.note":"incl. VAT. Extras separate.","packages.footer":"* If no gravity drain, condensate pump is an extra (CHF 280–450). We flag it from your photos.",
+"how.label":"How it works","how.h2":"Tell us → Assess → Quote → Install → <em>Maintain</em>","how.sub":"Designed so you can sit back and relax. Ordering AC should feel like a premium service, not hardware hassle.","how.s1t":"Tell us","how.s1d":"Share ZIP, rooms & size in seconds.","how.s2t":"We assess","how.s2d":"Review photos, pipe route, outdoor spot, electrics.","how.s3t":"Fixed quote","how.s3d":"Equipment, install & extras clearly itemized.","how.s4t":"We install","how.s4d":"Clean, professional install and complete setup.","how.s5t":"We care","how.s5d":"Optional annual maintenance so you never worry.",
+"est.h2":"Get an indicative price — <em style=\"font-family:'Instrument Serif',serif;font-weight:400\">no guesswork</em>","est.sub":"Answer 3 quick questions and see the typical range for similar homes near you. Your exact price after our photo check.","est.cta":"Start 2-min estimate →","est.note":"No obligation • Reply within 24h","est.teaser":"Try quick teaser","est.q1":"How many rooms?","est.q2":"Property","est.teaserNote":"Typical range incl. standard install • Updates live","est.cta2":"Get exact quote →",
+"incl.label":"Transparency","incl.h2":"What’s included. <em>What might be extra.</em>","incl.lead":"No surprise invoice. We flag extras before you pay.","incl.included":"Included (Standard)","incl.value":"Value","incl.r1":"Up to 3 m refrigerant line per indoor unit","incl.r2":"1 wall core drill (up to 300 mm)","incl.r3":"Condensate hose to gravity drain","incl.r4":"Mounting, vacuum, commissioning","incl.r5":"Instruction & handover","incl.extra":"Possible extras (if needed)","incl.range":"Range","incl.e1":"Additional pipe length","incl.e2":"Extra core drill / chiselling","incl.e3":"Condensate pump","incl.e4":"Electrical feed from distribution","incl.e4v":"On inspection","incl.e5":"Scaffold / lift (above 3 m)","incl.e5v":"At cost","incl.note":"We assess extras from your photos. You approve the final quote before work starts.",
+"maint.label":"Maintenance","maint.h2":"Protect your investment.","maint.lead":"Annual inspection keeps it efficient, hygienic and quiet. Filter clean, hygiene check, performance test, priority service.","maint.b1":"✓ Annual visit • 60–90 min","maint.b2":"✓ Cleaning & hygiene • F-gas compliant","maint.b3":"✓ Priority if fault in summer","maint.cta":"See maintenance →","maint.pricek":"Annual care","maint.per":"/ indoor unit / year","maint.incl":"incl. travel in service area • incl. VAT","maint.cta2":"Add to my quote","maint.reminder":"We send a reminder every spring.",
+"cases.label":"References","cases.h2":"Real installations. <em>Coming summer 2026.</em>","cases.c1t":"2-room apartment • Zurich 8004","cases.c1d":"2 indoor + 1 outdoor on balcony • 7 m piping • balcony mounting • 1 day install","cases.c2t":"1-room • Home office • Dübendorf","cases.c2d":"Quiet 19 dB(A) unit • condensate pump • electrical feed extended • 6 hrs","cases.c3t":"3-room house • Uster","cases.c3d":"3 rooms + heating mode • outdoor unit garden side • 12 m piping • scaffold","cases.c4t":"2-room penthouse • Baden 5400","cases.c4d":"2 indoor units + terrace outdoor mount • 9 m line • whisper quiet mode","cases.c5t":"1-room bedroom • Aarau 5000","cases.c5d":"Single split system • core drilling through brick • 1 day quick turnaround","cases.c6t":"4-room villa • Winterthur 8400","cases.c6d":"Multi-split heat pump system • 4 indoor units • custom wall mounting","cases.soon":"Photos after first installs","cases.note":"We publish only real projects with client consent. No stock testimonials.",
+"areas.label":"Service area","areas.h2":"Greater Zurich + Aargau","areas.lead":"Zurich core + most of Aargau — Zurich, Limmattal, Baden, Aarau, Lenzburg, Brugg and surroundings. We check your PLZ live.","areas.mapNote":"~45 km radius • Zurich + Aargau","areas.cta":"Check postcode →","areas.outside":"Outside today? Join waitlist — we expand by demand.",
+"faq.h2":"Questions we hear","faq.q1":"Do I need a permit for the outdoor unit?","faq.a1":"Possibly. It depends on municipality, zone, building and condominium rules. Outdoor units can affect noise (LSV) and appearance. We assess from your photos and clarify with your commune/property manager. We do not make legal promises without checking your address.","faq.q2":"What does it really cost?","faq.a2":"From CHF 3'500 (1 room), CHF 6'200 (2 rooms), CHF 8'500 (3 rooms) incl. standard installation and VAT. Extras (long pipe, pump, electrics, scaffold) quoted separately after photo review. You approve before we start.","faq.q3":"How loud is it? Can I sleep?","faq.a3":"Indoor units we use are 19–22 dB(A) in quiet mode — whisper level. Outdoor units ~45–52 dB(A). We position to respect noise limits and neighbours.","faq.q4":"Does it also heat?","faq.a4":"Yes, all our split systems are heat pumps and can heat efficiently in transition seasons. We advise if heating is a main goal.","faq.q5":"I rent. Can I install?","faq.a5":"Only with written landlord / STWEG approval. We provide a one-page info sheet for your landlord and help with the request.","faq.q6":"How fast is installation?","faq.a6":"After your fixed quote: typically 2–4 weeks depending on season and stock. Install itself is usually one day.","faq.more":"See all FAQs →",
+"final.h2":"Ready for cool, quiet rooms?","final.sub":"Get your free, no-obligation assessment. Answer a few questions — we do the rest.","final.cta":"Get my estimate →","final.call":"Or call 077 974 39 14","final.note":"Mo–Fr 9–17h • Response within 24h",
+"quiz.title":"Estimate — 2 minutes","quiz.s1k":"Step 1 • Context","quiz.s1h":"What are you cooling?","quiz.qType":"Building type","quiz.apartment":"Apartment","quiz.house":"House","quiz.office":"Office / Shop","quiz.other":"Other","quiz.qRooms":"Number of rooms","quiz.qWhich":"Which rooms?","quiz.living":"Living room","quiz.bed":"Bedroom","quiz.homeoffice":"Home office","quiz.multi":"Multiple","quiz.s2h":"Tell us about the property","quiz.own":"Own or rent?","quiz.ownYes":"Own","quiz.rent":"Rent","quiz.rentNote":"Written landlord/STWEG approval required. We provide a sheet for them.","quiz.floor":"Floor","quiz.size":"Room size (m²)","quiz.plzNote":"We validate inside Greater Zurich and Aargau service area.","quiz.s3h":"Outdoor unit & routes","quiz.balcony":"Balcony / terrace / outdoor area?","quiz.yes":"Yes","quiz.no":"No","quiz.outdoor":"Where could outdoor unit go?","quiz.ob1":"Balcony","quiz.ob2":"Façade","quiz.ob3":"Flat roof","quiz.ob4":"Garden","quiz.unknown":"Don't know","quiz.pipe":"Pipe distance estimate","quiz.electro":"Existing electrical connection?","quiz.s4h":"Main objective","quiz.cool":"Cooling only","quiz.both":"Cooling + heating","quiz.notes":"Optional notes","quiz.s5h":"Upload photos — helps accuracy","quiz.s5d":"Phone photos are enough. We need: room, possible outdoor spot, electrical panel, exterior wall.","quiz.up1":"Room","quiz.up2":"Outdoor spot","quiz.up3":"Electrics","quiz.up4":"Exterior wall","quiz.skipNote":"You can skip, but without photos +15% price uncertainty. Mobile: tap to take photo.","quiz.estimateLabel":"Indicative range for similar projects","quiz.estimateNote":"Exact price after photo assessment. Factors: pipe length, drilling, electrics, condensate, access, permit.","quiz.consent":"I agree to be contacted about my request and accept the privacy policy (nDSG). *","quiz.submit":"Request exact quote →","generic.back":"← Back to home","sticky.call":"Call","sticky.quote":"Get estimate","footer.tag":"AC supplied, professionally installed and maintained. Greater Zurich.","footer.privacy":"Privacy","footer.terms":"Terms","footer.imprint":"Imprint"
+},
+de:{
+"nav.solutions":"Lösungen","nav.pricing":"Preise","nav.installation":"Installation","nav.maintenance":"Wartung","nav.permits":"Bewilligung","nav.areas":"Gebiet","nav.faq":"FAQ","nav.contact":"Kontakt","nav.cta":"Offerte anfordern",
+"hero.eyebrow":"Greater Zurich • Wohnung & kleines Gewerbe","hero.h1":"Klimaanlage <em>inkl. Montage & Service.</em>","hero.sub":"Sagen Sie uns, was gekühlt werden soll. Wir empfehlen das passende System, übernehmen die Installation und kümmern uns danach darum. Kein Katalog, kein Fachchinesisch.","hero.cta1":"Offerte in 2 Min. anfordern →","hero.cta2":"So funktioniert's","hero.pill1":"Festpreis-Offerte","hero.pill2":"Geprüfte Installationspartner","hero.pill3":"Markengeräte • Garantie","hero.card1":"Typisches 2-Raum-Projekt","hero.card2":"ab inkl. Standardmontage","hero.card3":"inkl. Inbetriebnahme",
+"trust.t1":"Schweizer Servicegebiet","trust.d1":"Zürich + Aargau. Wir kennen Gebäude & Regeln.","trust.t2":"Geprüfter Installationspartner","trust.d2":"Zertifizierte Kälte + konzessionierter Elektriker (ESTI).","trust.t3":"Bewährte Marken","trust.d3":"Daikin, Mitsubishi Electric — zuverlässig & leise.","trust.t4":"Transparente Offerte","trust.d4":"Inklusive vs. mögliche Extras — schriftlich.",
+"problem.label":"Warum mit uns","problem.h2":"Mit <em>uns</em> vs. alleine.","problem.lead":"Online wirkt Klima einfach — bis Bewilligung, Elektro, Kondensat & Lärm kommen. Wir übernehmen alles.","problem.c1t":"Alleine machen","problem.c1a":"10+ Modelle, SEER/SCOP — Sie werden zum Experten","problem.c1b":"Offerte ohne Check → Mehrkosten","problem.c1c":"Sie jagen Elektriker, Bewilligung, STWEG","problem.c1d":"Danach kümmert sich niemand","problem.c2t":"Sorgen, die wir lösen","problem.c2a":"Aussenplatz & Lärm (LSV)","problem.c2b":"Bohrung & Leitung — vorher fixiert","problem.c2c":"Miete — Vermieter-Merkblatt inkl.","problem.c2d":"Wartung, Garantie, Priorität","problem.c3t":"Mit KlimaPro","problem.c3a":"Wir empfehlen — kein Fachchinesisch","problem.c3b":"Wir prüfen via Fotos + PLZ, melden Extras vorab","problem.c3c":"Wir koordinieren Montage & Elektriker","problem.c3d":"Festpreis + Jahrespflege — ein Ansprechpartner","problem.cta":"Abklärung starten →",
+"packages.label":"Einfache Pakete — kein Katalog","packages.h2":"Ein, zwei oder drei Räume. <em>Wir dimensionieren.</em>","packages.lead":"Jedes Paket inkl. Gerät, Standardmontage und Inbetriebnahme. Mehrarbeit, falls nötig, transparent offeriert.","packages.p1k":"1 Raum • Schlafzimmer / Büro","packages.p2k":"2 Räume • Wohnung","packages.p3k":"3 Räume • Haus / grosse Wohnung","packages.from":"ab","packages.popular":"Meist gewählt","packages.p1a":"1 Innen- + 1 Aussengerät","packages.p1b":"Bis 3 m Leitung, 1 Kernbohrung","packages.p1c":"Inbetriebnahme & Übergabe","packages.p1d":"Herstellergarantie","packages.p2a":"2 Innen- + 1 Aussengerät","packages.p2b":"Bis 3 m pro Gerät, 1–2 Bohrungen","packages.p2c":"Kondensatführung inkl.*","packages.p2d":"Flüstermodus","packages.p3a":"3 Innen- + 1 Aussengerät","packages.p3b":"Bis 3 m pro Gerät","packages.p3c":"Heizen optional","packages.p3d":"Prioritätswartung","packages.cta":"1-Raum prüfen →","packages.cta2":"2-Raum prüfen →","packages.cta3":"3-Raum prüfen →","packages.note":"inkl. MwSt. Extras separat.","packages.footer":"* Ohne Schwerkraftablauf: Kondensatpumpe als Extra (CHF 280–450). Wir erkennen es auf Ihren Fotos.",
+"how.label":"So funktioniert's","how.h2":"Sagen → Prüfen → Offerte → Installieren → <em>Warten</em>","how.sub":"Entspannt zurücklehnen. Klima bestellen soll sich wie ein Premium-Service anfühlen, nicht wie Hardware-Stress.","how.s1t":"Sagen","how.s1d":"PLZ, Räume & Grösse in Sekunden.","how.s2t":"Wir prüfen","how.s2d":"Fotos, Leitungsweg, Aussenstandort, Elektro.","how.s3t":"Festofferte","how.s3d":"Gerät, Montage & Extras klar ausgewiesen.","how.s4t":"Wir installieren","how.s4d":"Saubere Profi-Montage & Inbetriebnahme.","how.s5t":"Wir kümmern uns","how.s5d":"Optionale Jahreswartung — Sie sorgen sich um nichts.",
+"est.h2":"Richtpreis — <em style=\"font-family:'Instrument Serif',serif;font-weight:400\">ohne Rätselraten</em>","est.sub":"3 kurze Fragen und Sie sehen den typischen Bereich für ähnliche Wohnungen in Ihrer Nähe. Exakt nach Foto-Check.","est.cta":"2-Min. Estimate starten →","est.note":"Unverbindlich • Antwort innert 24h","est.teaser":"Schnelltest","est.q1":"Wie viele Räume?","est.q2":"Objekt","est.teaserNote":"Typischer Bereich inkl. Standardmontage • live","est.cta2":"Exakte Offerte anfordern →",
+"incl.label":"Transparenz","incl.h2":"Was inkl. ist. <em>Was extra kosten kann.</em>","incl.lead":"Keine Überraschungsrechnung. Wir melden Extras vorab.","incl.included":"Inklusive (Standard)","incl.value":"Wert","incl.r1":"Bis 3 m Kältemittelleitung pro Innengerät","incl.r2":"1 Kernbohrung (bis 300 mm)","incl.r3":"Kondensatschlauch zum Ablauf","incl.r4":"Montage, Vakuum, Inbetriebnahme","incl.r5":"Instruktion & Übergabe","incl.extra":"Mögliche Zusatzarbeiten","incl.range":"Bereich","incl.e1":"Zusätzliche Leitungslänge","incl.e2":"Extra Bohrung / Spitzarbeiten","incl.e3":"Kondensatpumpe","incl.e4":"Elektrozuleitung ab Verteilung","incl.e4v":"Nach Abklärung","incl.e5":"Gerüst / Hebebühne (über 3 m)","incl.e5v":"Nach Aufwand","incl.note":"Wir beurteilen Extras anhand Ihrer Fotos. Sie geben die Festofferte frei.",
+"maint.label":"Wartung","maint.h2":"Schützen Sie Ihre Investition.","maint.lead":"Jährliche Kontrolle hält die Anlage effizient, hygienisch und leise. Filter, Hygiene-Check, Leistungstest, Prioritätsservice.","maint.b1":"✓ Jährlicher Besuch • 60–90 Min.","maint.b2":"✓ Reinigung & Hygiene • F-Gas-konform","maint.b3":"✓ Priorität bei Störung im Sommer","maint.cta":"Wartung ansehen →","maint.pricek":"Jahrespflege","maint.per":"/ Innengerät / Jahr","maint.incl":"inkl. Anfahrt im Servicegebiet • inkl. MwSt.","maint.cta2":"Zur Offerte hinzufügen","maint.reminder":"Wir erinnern Sie jeden Frühling.",
+"cases.label":"Referenzen","cases.h2":"Echte Installationen. <em>Ab Sommer 2026.</em>","cases.c1t":"2-Zimmer-Wohnung • Zürich 8004","cases.c1d":"2 innen + 1 aussen auf Balkon • 7 m Leitung • Balkonmontage • 1 Tag","cases.c2t":"1 Raum • Home-Office • Dübendorf","cases.c2d":"Leise 19 dB(A) • Kondensatpumpe • Elektro erweitert • 6 Std.","cases.c3t":"3-Zimmer-Haus • Uster","cases.c3d":"3 Räume + Heizen • Aussengerät Gartenseite • 12 m Leitung • Gerüst","cases.c4t":"2-Zimmer Penthouse • Baden 5400","cases.c4d":"2 Innengeräte + Terrasse Aussenmontage • 9 m Leitung • Flüstermodus","cases.c5t":"1-Zimmer Schlafzimmer • Aarau 5000","cases.c5d":"Single-Split System • Kernbohrung Backstein • 1 Tag Montage","cases.c6t":"4-Zimmer Villa • Winterthur 8400","cases.c6d":"Multi-Split Wärmepumpensystem • 4 Innengeräte • Wandmontage","cases.soon":"Fotos nach ersten Anlagen","cases.note":"Wir publizieren nur echte Projekte mit Zustimmung. Keine Fake-Bewertungen.",
+"areas.label":"Servicegebiet","areas.h2":"Greater Zurich + Aargau","areas.lead":"Zürich Kern + grosser Teil Aargau — Zürich, Limmattal, Baden, Aarau, Lenzburg, Brugg und Umgebung. Wir prüfen PLZ live.","areas.mapNote":"~45 km Radius • Zürich + Aargau","areas.cta":"PLZ prüfen →","areas.outside":"Heute ausserhalb? Warteliste — wir erweitern nach Nachfrage.",
+"faq.h2":"Häufige Fragen","faq.q1":"Brauche ich eine Bewilligung fürs Aussengerät?","faq.a1":"Möglicherweise. Abhängig von Gemeinde, Zone, Gebäude und Stockwerkeigentum. Aussengeräte betreffen Lärm (LSV) und Ortsbild. Wir beurteilen anhand Ihrer Fotos und klären mit Gemeinde/Verwaltung. Keine Rechtsversprechen ohne Prüfung Ihrer Adresse.","faq.q2":"Was kostet es wirklich?","faq.a2":"Ab CHF 3'500 (1 Raum), CHF 6'200 (2 Räume), CHF 8'500 (3 Räume) inkl. Standardmontage und MwSt. Extras (lange Leitung, Pumpe, Elektro, Gerüst) separat nach Foto-Prüfung. Sie geben frei.","faq.q3":"Wie laut ist es? Kann ich schlafen?","faq.a3":"Innengeräte 19–22 dB(A) im Flüstermodus — sehr leise. Aussengeräte ~45–52 dB(A). Wir platzieren LSV-konform.","faq.q4":"Kann es auch heizen?","faq.a4":"Ja, alle Splitgeräte sind Wärmepumpen und heizen effizient in der Übergangszeit.","faq.q5":"Ich miete. Geht das?","faq.a5":"Nur mit schriftlicher Zustimmung Vermieter/STWEG. Wir liefern ein Merkblatt für die Anfrage.","faq.q6":"Wie schnell Installation?","faq.a6":"Nach Festofferte: meist 2–4 Wochen je nach Saison/Lager. Montage selbst meist 1 Tag.","faq.more":"Alle FAQs ansehen →",
+"final.h2":"Bereit für kühle, leise Räume?","final.sub":"Kostenlose, unverbindliche Abklärung. Ein paar Fragen — wir machen den Rest.","final.cta":"Meine Einschätzung holen →","final.call":"Oder 077 974 39 14 anrufen","final.note":"Mo–Fr 9–17h • Antwort innert 24h",
+"quiz.title":"Estimate — 2 Minuten","quiz.s1k":"Schritt 1 • Kontext","quiz.s1h":"Was kühlen Sie?","quiz.qType":"Gebäudetyp","quiz.apartment":"Wohnung","quiz.house":"Haus","quiz.office":"Geschäft / Büro","quiz.other":"Andere","quiz.qRooms":"Anzahl Räume","quiz.qWhich":"Welche Räume?","quiz.living":"Wohnzimmer","quiz.bed":"Schlafzimmer","quiz.homeoffice":"Büro","quiz.multi":"Mehrere","quiz.s2h":"Zum Objekt","quiz.own":"Eigentum oder Miete?","quiz.ownYes":"Eigentum","quiz.rent":"Miete","quiz.rentNote":"Schriftliche Vermieter-/STWEG-Zustimmung nötig. Wir liefern ein Merkblatt.","quiz.floor":"Etage","quiz.size":"Raumgrösse (m²)","quiz.plzNote":"Wir validieren im Servicegebiet Greater Zurich und Aargau.","quiz.s3h":"Aussengerät & Wege","quiz.balcony":"Balkon / Terrasse / Aussenbereich?","quiz.yes":"Ja","quiz.no":"Nein","quiz.outdoor":"Wo könnte Aussengerät stehen?","quiz.ob1":"Balkon","quiz.ob2":"Fassade","quiz.ob3":"Flachdach","quiz.ob4":"Garten","quiz.unknown":"Weiss nicht","quiz.pipe":"Leitungsweg geschätzt","quiz.electro":"Stromanschluss vorhanden?","quiz.s4h":"Hauptziel","quiz.cool":"Nur Kühlen","quiz.both":"Kühlen + Heizen","quiz.notes":"Optionale Notizen","quiz.s5h":"Fotos hochladen — erhöht Genauigkeit","quiz.s5d":"Handy-Fotos reichen. Wir brauchen: Raum, möglicher Aussenstandort, Elektroverteiler, Aussenwand.","quiz.up1":"Raum","quiz.up2":"Aussenstandort","quiz.up3":"Elektro","quiz.up4":"Aussenwand","quiz.skipNote":"Sie können überspringen, aber ohne Fotos +15% Preisunsicherheit. Mobil: tippen zum Fotografieren.","quiz.estimateLabel":"Richtbereich für ähnliche Projekte","quiz.estimateNote":"Exakter Preis nach Foto-Prüfung. Faktoren: Leitung, Bohrung, Elektro, Kondensat, Zugang, Bewilligung.","quiz.consent":"Ich willige ein, kontaktiert zu werden und akzeptiere die Datenschutzbestimmungen (nDSG). *","quiz.submit":"Exakte Offerte anfordern →","generic.back":"← Zurück zur Startseite","sticky.call":"Anrufen","sticky.quote":"Offerte","footer.tag":"Klimaanlage inkl. Montage & Wartung. Greater Zurich.","footer.privacy":"Datenschutz","footer.terms":"AGB","footer.imprint":"Impressum"
+}
+}
+let lang=localStorage.getItem('klima.lang')||'de'
+function applyLang(){
+  document.documentElement.lang=lang
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k=el.getAttribute('data-i18n')
+    if(dict[lang][k]) el.innerHTML=dict[lang][k]
+  })
+  document.getElementById('btn-en').classList.toggle('active',lang==='en')
+  document.getElementById('btn-de').classList.toggle('active',lang==='de')
+}
+document.getElementById('btn-en').onclick=()=>{lang='en';localStorage.setItem('klima.lang',lang);applyLang();renderGeneric()}
+document.getElementById('btn-de').onclick=()=>{lang='de';localStorage.setItem('klima.lang',lang);applyLang();renderGeneric()}
+applyLang()
+
+// Canton validation function
+function isCantonAllowed(plz) {
+  const code = parseInt(plz, 10);
+  if (isNaN(code)) return false;
+  
+  // Aargau postal codes (~4300-5799) & Zürich postal codes (~8000-8999, 8400-8499)
+  const isAargau = (code >= 4300 && code <= 5799);
+  const isZurich = (code >= 8000 && code <= 8999);
+  
+  return isAargau || isZurich;
+}
+
+function validatePlzField(inputEl) {
+  const value = inputEl.value.trim();
+  const msgEl = document.getElementById('plzValidationMsg');
+  if (!msgEl) return;
+  
+  if (value.length >= 4) {
+    if (isCantonAllowed(value)) {
+      msgEl.style.color = '#2e7d32';
+      msgEl.textContent = lang === 'de' ? '✓ Verfügbar in Zürich & Aargau' : '✓ Service available in Zurich & Aargau';
+    } else {
+      msgEl.style.color = '#d32f2f';
+      msgEl.textContent = lang === 'de' ? 'Wir arbeiten nur in Zürich oder Aargau' : 'We only work in Zürich or Aargau';
+    }
+  } else {
+    msgEl.style.color = 'var(--muted)';
+    msgEl.textContent = dict[lang]['quiz.plzNote'];
+  }
+}
+
+function checkMainPlz() {
+  const input = document.getElementById('areaPlzInput');
+  const res = document.getElementById('areaPlzResult');
+  if (!input || !res) return;
+  const val = input.value.trim();
+  res.style.display = 'block';
+  if (val.length >= 4 && isCantonAllowed(val)) {
+    res.style.color = '#2e7d32';
+    res.textContent = lang === 'de' ? '✓ Wir bedienen Ihre Region! Offerte starten.' : '✓ We cover your area! Start your estimate.';
+  } else {
+    res.style.color = '#d32f2f';
+    res.textContent = lang === 'de' ? 'Wir arbeiten nur in Zürich oder Aargau' : 'We only work in Zürich or Aargau';
+  }
+}
+
+// teaser
+function teaserPrice(){
+  const r=document.querySelector('#teaserRooms .active')?.dataset.v||'1'
+  const p=document.querySelector('#teaserProp .active')?.dataset.v||'flat'
+  let base={1:3500,2:6200,3:8500,4:10800,'5+':13500}[r]||3500
+  if(p==='house') base+=400
+  const low=base, high=Math.round(base*1.4)
+  document.getElementById('teaserPrice').textContent=`CHF ${low.toLocaleString('de-CH')} — ${high.toLocaleString('de-CH')}`
+}
+document.querySelectorAll('#teaserRooms .chip,#teaserProp .chip').forEach(c=>c.onclick=()=>{
+  c.parentElement.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));c.classList.add('active');teaserPrice()
+})
+
+// Active Quiz Container Helper
+function getActiveQuizContainer(){
+  return document.getElementById('estimateModal').classList.contains('open')
+    ? document.getElementById('modalQuizContainer')
+    : document.querySelector('#page-estimate');
+}
+
+// quiz logic
+let step=1
+const answers={}
+function updateQuizUI(){
+  document.querySelectorAll('.quiz-card').forEach(el=>{
+    el.style.display = parseInt(el.dataset.step)===step? 'block':'none'
+  })
+  document.querySelectorAll('.stepLabel').forEach(sl => sl.textContent = step);
+  document.querySelectorAll('.modal-progress-bar').forEach(pb => pb.style.width = (step/6*100)+'%');
+  const ms=document.getElementById('modalStep'); if(ms) ms.textContent=step
+  const mp=document.getElementById('modalProgress'); if(mp) mp.style.width=(step/6*100)+'%'
+  updateFinalRange()
+}
+
+function nextStep(){
+  if(step===2){
+    const container = getActiveQuizContainer();
+    const plzInput = container ? container.querySelector('[data-field="plz"]') : null;
+    const plz = plzInput ? plzInput.value.trim() : '';
+    if(!plz){alert(lang==='de'?'Bitte PLZ eingeben':'Please enter postcode');return}
+    if(!isCantonAllowed(plz)){
+      alert(lang==='de'?'Wir arbeiten nur in Zürich oder Aargau':'We only work in Zürich or Aargau');
+      return;
+    }
+  }
+  if(step<6){step++;updateQuizUI();window.scrollTo({top:0,behavior:'smooth'})}
+}
+
+function prevStep(){if(step>1){step--;updateQuizUI()}}
+
+function updateFinalRange(){
+  const container = getActiveQuizContainer();
+  const rooms=answers.rooms||container?.querySelector('[data-group="rooms"] .active')?.dataset.v||'2'
+  const pipe=answers.pipe||container?.querySelector('[data-group="pipe"] .active')?.dataset.v||'<3m'
+  const electro=answers.electro||container?.querySelector('[data-group="electro"] .active')?.dataset.v||'yes'
+  let base={1:3500,2:6200,3:8500,4:10800,'5+':13500}[rooms]||6200
+  if(pipe==='3-8m') base+=600
+  if(pipe==='gt8m') base+=1400
+  if(electro==='no') base+=500
+  const low=Math.round(base*0.95), high=Math.round(base*1.15)
+  document.querySelectorAll('.finalRange').forEach(el => {
+    el.textContent = `CHF ${low.toLocaleString('de-CH')} — ${high.toLocaleString('de-CH')}`;
+  });
+}
+
+function bindQuizEvents(root){
+  root.querySelectorAll('[data-group]').forEach(g=>{
+    const multi=g.hasAttribute('data-multi')
+    g.querySelectorAll('.chip').forEach(chip=>{
+      chip.onclick=()=>{
+        if(multi){chip.classList.toggle('active')}else{g.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));chip.classList.add('active')}
+        const group=g.dataset.group
+        if(multi){answers[group]=[...g.querySelectorAll('.chip.active')].map(x=>x.dataset.v)}
+        else {answers[group]=chip.dataset.v}
+        if(group==='own'){
+          const activeContainer = getActiveQuizContainer();
+          const n = activeContainer?.querySelector('.rentNote'); 
+          if(n) n.style.display=chip.dataset.v==='rent'?'block':'none';
+        }
+        teaserPrice();updateFinalRange()
+      }
+    })
+  })
+  root.querySelectorAll('.upload-slot input').forEach(inp=>{
+    inp.onchange=e=>{
+      const file=e.target.files[0]; if(!file) return
+      const slot=e.target.closest('.upload-slot')
+      slot.classList.add('has-file')
+      const url=URL.createObjectURL(file)
+      slot.innerHTML=`<img src="${url}" alt=""><button style="position:absolute;top:6px;right:6px;background:#fff;border-radius:999px;border:1px solid #ddd;padding:4px 8px;font:600 11px Inter">✕</button><input type="file" accept="image/*" hidden>`
+      slot.querySelector('button').onclick=(ev)=>{ev.preventDefault();slot.classList.remove('has-file');slot.innerHTML=`<input type="file" accept="image/*" hidden><span>＋ ${slot.dataset.slot}</span>`}
+    }
+  })
+}
+
+// Initial setup for static page form
+bindQuizEvents(document.querySelector('#page-estimate'));
+
+function submitLead(){
+  const container = getActiveQuizContainer();
+  const name = container?.querySelector('[data-field="cName"]')?.value.trim();
+  const phone = container?.querySelector('[data-field="cPhone"]')?.value.trim();
+  const consent = container?.querySelector('[data-field="consent"]')?.checked;
+  
+  if(!name || !phone){ alert(lang==='de'?'Bitte Name & Telefon eingeben':'Please enter name & phone'); return; }
+  if(!consent){ alert(lang==='de'?'Bitte Datenschutz zustimmen':'Please accept privacy'); return; }
+  
+  const plz = container?.querySelector('[data-field="plz"]')?.value || '';
+  const email = container?.querySelector('[data-field="cEmail"]')?.value || '';
+  const notes = container?.querySelector('[data-field="notes"]')?.value || '';
+  const floor = container?.querySelector('[data-field="floor"]')?.value || '';
+  const size = container?.querySelector('[data-field="size"]')?.value || '';
+  const own = container?.querySelector('[data-group="own"] .active')?.dataset.v || '';
+  const range = container?.querySelector('.finalRange')?.textContent || '';
+
+  // Include full specification payload
+  const data = { 
+    name, 
+    phone, 
+    email, 
+    plz, 
+    own,
+    floor,
+    size,
+    answers, 
+    notes, 
+    range, 
+    lang, 
+    ts: new Date().toISOString() 
+  };
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxqIpS-9DXyMnwertq-EpSd5MwTDduqoMqIPLBSztFrqcL6JUnRTPGHLHoTo4C5RPfXzA/exec';
+
+  fetch(scriptURL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  }).then(() => {
+    console.log('Detailed lead submitted successfully');
+  }).catch(err => {
+    console.error('Error submitting lead:', err);
+  });
+
+  // Local storage backup
+  const leads = JSON.parse(localStorage.getItem('klima.leads') || '[]');
+  leads.push(data);
+  localStorage.setItem('klima.leads', JSON.stringify(leads));
+
+  // Confirmation message
+  const submitMsg = container?.querySelector('.submitMsg');
+  if(submitMsg) {
+    submitMsg.style.display = 'block';
+    submitMsg.innerHTML = lang === 'de'
+      ? `✓ Danke, ${name}! Wir melden uns innert 24h (Mo–Fr) mit Ihrer Festofferte. Bereich: <b>${data.range}</b>.`
+      : `✓ Thanks, ${name}! We'll reply within 24h (Mon–Fri) with your fixed quote. Range: <b>${data.range}</b>.`;
+  }
+  const submitBtn = container?.querySelector('.submitBtn');
+  if(submitBtn) submitBtn.disabled = true;
+}
+
+const genericPages={
+"/solutions":{en:`<div class="section-label">Solutions</div><h1>Solutions for every home</h1><p class="lead" style="margin-top:8px">We guide you to a package — not a catalogue. All systems are quiet, efficient heat pumps (SEER up to 8.5, SCOP up to 5.1).</p><div class="grid-3" style="margin-top:22px"><div class="card"><b>1-Room (Split Single)</b><p style="color:var(--muted);font:400 13px Inter">One indoor unit e.g. bedroom or office. Ideal for renters with balcony access via one drill.</p><div style="font:700 18px Inter;margin-top:8px">from CHF 3'500</div><a href="#/estimate?pkg=1" class="btn btn-primary" style="margin-top:10px">Check →</a></div><div class="card card-popular"><span class="badge">Most chosen</span><b>2-Room (Multi-split)</b><p style="color:var(--muted);font:400 13px Inter">One outdoor + two indoor units. Best for 2-3 room flats. Only one outdoor spot needed.</p><div style="font:700 18px Inter;margin-top:8px">from CHF 6'200</div><a href="#/estimate?pkg=2" class="btn btn-primary" style="margin-top:10px">Check →</a></div><div class="card"><b>3-Room (Multi-split)</b><p style="color:var(--muted);font:400 13px Inter">One outdoor + three indoor units. House or large flat. Heating mode included.</p><div style="font:700 18px Inter;margin-top:8px">from CHF 8'500</div><a href="#/estimate?pkg=3" class="btn btn-primary" style="margin-top:10px">Check →</a></div></div><p style="margin-top:16px;font:400 13px Inter;color:var(--muted)">Includes: equipment, standard install (3m/ drill/ condensate), commissioning, instruction. Brands: Daikin, Mitsubishi Electric. We choose model for noise & efficiency, not you.</p>`,de:`<div class="section-label">Lösungen</div><h1>Lösungen für jedes Zuhause</h1><p class="lead" style="margin-top:8px">Wir führen Sie zum Paket — kein Katalog. Alle Anlagen sind leise, effiziente Wärmepumpen (SEER bis 8.5).</p><div class="grid-3" style="margin-top:22px"><div class="card"><b>1 Raum (Single-Split)</b><p style="color:var(--muted);font:400 13px Inter">Ein Innengerät, z.B. Schlafzimmer oder Büro. Ideal für Miete mit Balkon.</p><div style="font:700 18px Inter;margin-top:8px">ab CHF 3'500</div><a href="#/estimate?pkg=1" class="btn btn-primary" style="margin-top:10px">Prüfen →</a></div><div class="card card-popular"><span class="badge">Meist gewählt</span><b>2 Räume (Multi-Split)</b><p style="color:var(--muted);font:400 13px Inter">Ein Aussen- + zwei Innengeräte. Beste für 2–3 Zi-Wohnungen. Nur ein Aussenstandort nötig.</p><div style="font:700 18px Inter;margin-top:8px">ab CHF 6'200</div><a href="#/estimate?pkg=2" class="btn btn-primary" style="margin-top:10px">Prüfen →</a></div><div class="card"><b>3 Räume (Multi-Split)</b><p style="color:var(--muted);font:400 13px Inter">Ein Aussen- + drei Innengeräte. Haus oder grosse Wohnung. Heizen inkl.</p><div style="font:700 18px Inter;margin-top:8px">ab CHF 8'500</div><a href="#/estimate?pkg=3" class="btn btn-primary" style="margin-top:10px">Prüfen →</a></div></div>`},
+"/pricing":{en:`<div class="section-label">Pricing</div><h1>Transparent pricing</h1><p class="lead" style="margin-top:8px">From-prices include VAT and standard installation. No false precision — exact after photo check.</p><div class="grid-3" style="margin-top:22px"><div class="card"><b>1 Room</b><div class="price">CHF 3'500 <span>from</span></div><ul><li>1+1 units</li><li>3m line, 1 drill</li><li>Commissioning</li></ul></div><div class="card"><b>2 Rooms</b><div class="price">CHF 6'200 <span>from</span></div><ul><li>2+1 units</li><li>3m each, 1-2 drills</li><li>Condensate incl.*</li></ul></div><div class="card"><b>3 Rooms</b><div class="price">CHF 8'500 <span>from</span></div><ul><li>3+1 units</li><li>3m each</li><li>Heating optional</li></ul></div></div><div style="margin-top:16px" class="note">Examples: <b>Simple</b> 1-room short run = CHF 3'700 • <b>Standard</b> 2-room 8m = CHF 7'100 • <b>Complex</b> 3-room + pump + electrics + scaffold = CHF 11'500</div><div class="table" style="margin-top:16px"><div style="padding:14px;font:600 14px Inter">What you pay for — breakdown on every quote</div></div>`,de:`<div class="section-label">Preise</div><h1>Transparente Preise</h1><p class="lead">Ab-Preise inkl. MwSt. und Standardmontage. Keine Scheingenauigkeit — exakt nach Foto-Check.</p><div class="grid-3" style="margin-top:22px"><div class="card"><b>1 Raum</b><div class="price">CHF 3'500 <span>ab</span></div><ul><li>1+1 Geräte</li><li>3m Leitung, 1 Bohrung</li><li>Inbetriebnahme</li></ul></div><div class="card"><b>2 Räume</b><div class="price">CHF 6'200 <span>ab</span></div><ul><li>2+1 Geräte</li><li>3m je, 1–2 Bohrungen</li><li>Kondensat inkl.*</li></ul></div><div class="card"><b>3 Räume</b><div class="price">CHF 8'500 <span>ab</span></div><ul><li>3+1 Geräte</li><li>3m je</li><li>Heizen optional</li></ul></div></div><div style="margin-top:16px" class="note">Beispiele: <b>Einfach</b> 1-Raum kurzer Weg = CHF 3'700 • <b>Standard</b> 2-Räume 8m = CHF 7'100 • <b>Komplex</b> 3-Räume + Pumpe + Elektro + Gerüst = CHF 11'500</div>`},
+"/installation":{en:`<div class="section-label">Installation</div><h1>How installation works — 1 day, end-to-end</h1><div class="how" style="margin-top:16px"><div class="step"><div class="step-num">1</div><b>Assessment</b><p>Photos + PLZ + call. We size pipe route, outdoor spot, electrics.</p></div><div class="step"><div class="step-num">2</div><b>Recommendation</b><p>We pick quiet, efficient model (Daikin/Mitsubishi) for your rooms.</p></div><div class="step"><div class="step-num">3</div><b>Delivery</b><p>Equipment to site, scaffold if needed above 3m.</p></div><div class="step"><div class="step-num">4</div><b>Mount & connect</b><p>Core drill, piping, condensate, outdoor mounting.</p></div><div class="step"><div class="step-num">5</div><b>Electrics</b><p>Licensed electrician (ESTI/NIV) connects. Permit check if needed.</p></div></div><div class="how" style="margin-top:12px"><div class="step"><div class="step-num">6</div><b>Vacuum & test</b><p>Pressure, vacuum, leak test.</p></div><div class="step"><div class="step-num">7</div><b>Commission</b><p>Fill, run, measure.</p></div><div class="step"><div class="step-num">8</div><b>Handover</b><p>Show operation, filter, warranty, maintenance offer.</p></div><div class="step" style="grid-column:span 2"><b>Timeline</b><p>Quote in 24–48h → Install in 2–4 weeks (seasonal) → 30% deposit, rest after handover.</p></div></div><div class="note" style="margin-top:14px">Electrical work by concessioned installer only. Permit needs checked per object — see Permits page.</div>`,de:`<div class="section-label">Installation</div><h1>So läuft die Montage — 1 Tag, alles aus einer Hand</h1><div class="how" style="margin-top:16px"><div class="step"><div class="step-num">1</div><b>Abklärung</b><p>Fotos + PLZ + Anruf. Leitungsweg, Aussenstandort, Elektro.</p></div><div class="step"><div class="step-num">2</div><b>Empfehlung</b><p>Wir wählen leises, effizientes Modell (Daikin/Mitsubishi).</p></div><div class="step"><div class="step-num">3</div><b>Lieferung</b><p>Geräte zur Baustelle, Gerüst falls über 3m.</p></div><div class="step"><div class="step-num">4</div><b>Montage</b><p>Bohrung, Leitungen, Kondensat, Aussenmontage.</p></div><div class="step"><div class="step-num">5</div><b>Elektro</b><p>Konzessionierter Elektriker (ESTI/NIV). Bewilligung prüfen.</p></div></div>`},
+"/maintenance":{en:`<div class="section-label">Maintenance</div><h1>Protect your investment</h1><p class="lead">CHF 189 / indoor unit / year — annual 60–90 min visit. Cleaning, hygiene, filter, performance, F-gas log, priority in summer. Reminder each spring. Cancel yearly.</p><div style="margin-top:16px;display:flex;gap:10px"><a href="#/estimate?maint=1" class="btn btn-primary">Add maintenance to quote →</a></div><ul style="margin-top:16px;display:grid;gap:8px"><li>✓ Hygiene & filter deep clean</li><li>✓ Performance & leak check</li><li>✓ Priority service if fault</li></ul>`,de:`<div class="section-label">Wartung</div><h1>Investition schützen</h1><p class="lead">CHF 189 / Innengerät / Jahr — jährlich 60–90 Min. Reinigung, Hygiene, Filter, Leistung, F-Gas-Protokoll, Priorität im Sommer. Erinnerung jeden Frühling. Jährlich kündbar.</p><a href="#/estimate?maint=1" class="btn btn-primary" style="margin-top:16px">Wartung zur Offerte →</a>`},
+"/permits":{en:`<div class="section-label">Permits & Approvals</div><h1>Outdoor units may need approval</h1><p class="lead">This is not legal advice. Requirements depend on canton, municipality, zone, building and ownership (STWEG/rental). Factors: noise ordinance (LSV), appearance/heritage, distance to neighbour.</p><div style="margin-top:16px;display:grid;gap:12px"><div class="card"><b>Our process</b><ul><li>You upload outdoor-spot photo + PLZ</li><li>We check BZO of your commune + noise data sheet of unit</li><li>If needed: landlord/STWEG letter + commune pre-check</li></ul></div><div class="note">Authoritative sources: your commune Bauamt, cantonal BZO (zh.ch/baubewilligung), Lärmschutz-Verordnung (LSV), ESTI for electrics. We help, but final approval is by authorities/owner.</div></div>`,de:`<div class="section-label">Bewilligung</div><h1>Aussengeräte können bewilligungspflichtig sein</h1><p class="lead">Keine Rechtsberatung. Massgebend sind Kanton, Gemeinde, Bauzone, Gebäude und Eigentum (STWEG/Miete). Faktoren: LSV (Lärm), Ortsbild/Denkmalschutz, Abstand.</p><div style="margin-top:16px" class="card"><b>Unser Vorgehen</b><ul><li>Sie laden Foto Aussenstandort + PLZ hoch</li><li>Wir prüfen BZO Ihrer Gemeinde + Lärmdatenblatt des Geräts</li><li>Bei Bedarf: Vermieter/STWEG-Schreiben + Vorabklärung Gemeinde</li></ul></div>`},
+"/brands":{en:`<div class="section-label">Brands</div><h1>Two brands we trust</h1><div class="grid-3" style="margin-top:16px"><div class="card"><b>Daikin Perfera</b><p style="color:var(--muted);font:400 13px Inter">SEER up to 8.5, 19 dB(A) quiet, proven in Swiss flats. 5-year warranty.</p></div><div class="card"><b>Mitsubishi Electric MSZ-AP</b><p style="color:var(--muted);font:400 13px Inter">Very quiet, stable at altitude, excellent for bedroom.</p></div></div><p style="margin-top:12px;font:400 13px Inter;color:var(--muted)">We will recommend one — you don't need to become an HVAC expert. No giant catalogue.</p>`,de:`<div class="section-label">Marken</div><h1>Zwei Marken, auf die wir vertrauen</h1><div class="grid-3" style="margin-top:16px"><div class="card"><b>Daikin Perfera</b><p style="color:var(--muted);font:400 13px Inter">SEER bis 8.5, 19 dB(A), bewährt in Schweizer Wohnungen.</p></div><div class="card"><b>Mitsubishi Electric MSZ-AP</b><p style="color:var(--muted);font:400 13px Inter">Sehr leise, stabil, ideal für Schlafzimmer.</p></div></div>`},
+"/areas":{en:`<div class="section-label">Service Area</div><h1>Greater Zurich — city pages</h1><p class="lead">We serve ~30 km around Zurich. Each city has local notes (building types, access, permit context).</p><div style="display:grid;gap:10px;margin-top:16px"><a class="card" href="#/areas/zurich"><b>Klimaanlage Zürich</b><span style="color:var(--muted);font:400 13px Inter">Altbau, Eigentumswohnungen, STWEG-heavy • permit often needed in city centre</span></a><a class="card" href="#/areas/winterthur"><b>Klimaanlage Winterthur</b><span style="color:var(--muted);font:400 13px Inter">EFH & Minergie • garden/roof placements common</span></a><a class="card" href="#/areas/uster"><b>Klimaanlage Uster</b><span style="color:var(--muted);font:400 13px Inter">Houses, easy access • fast permits outside core zone</span></a><a class="card" href="#/areas/dietikon"><b>Klimaanlage Dietikon</b><span style="color:var(--muted);font:400 13px Inter">Apartments, near Schlieren • balcony mounts</span></a></div>`,de:`<div class="section-label">Servicegebiet</div><h1>Greater Zurich — Ortsseiten</h1><p class="lead">Wir bedienen ~30 km um Zürich. Jede Stadt mit lokalen Hinweisen (Gebäudetyp, Zugang, Bewilligung).</p><div style="display:grid;gap:10px;margin-top:16px"><a class="card" href="#/areas/zurich"><b>Klimaanlage Zürich</b><span style="color:var(--muted);font:400 13px Inter">Altbau, Eigentumswohnungen, STWEG • Bewilligung in Innenstadt oft nötig</span></a><a class="card" href="#/areas/winterthur"><b>Klimaanlage Winterthur</b></a><a class="card" href="#/areas/uster"><b>Klimaanlage Uster</b></a><a class="card" href="#/areas/dietikon"><b>Klimaanlage Dietikon</b></a></div>`},
+"/faq":{en:`<div class="section-label">FAQ</div><h1>Frequently asked questions</h1><div style="display:grid;gap:10px;margin-top:16px"><details class="faq-item" open><summary>Do I need landlord approval? <span>+</span></summary><p>Yes, for rentals and STWEG. We provide a one-page sheet. No install without written ok.</p></details><details class="faq-item"><summary>What about condensate? <span>+</span></summary><p>We route to gravity drain if possible; otherwise pump (CHF 280–450). Flagged from photos.</p></details><details class="faq-item"><summary>Electrical requirements? <span>+</span></summary><p>230V dedicated circuit often needed. ESTI-compliant work by licensed electrician. We size it.</p></details><details class="faq-item"><summary>Warranty? <span>+</span></summary><p>Manufacturer 5 years + our installation warranty. Maintenance keeps warranty valid.</p></details></div>`,de:`<div class="section-label">FAQ</div><h1>Häufige Fragen (vollständig)</h1><div style="display:grid;gap:10px;margin-top:16px"><details class="faq-item" open><summary>Vermieterzustimmung nötig? <span>+</span></summary><p>Ja, für Miete/STWEG. Wir liefern Merkblatt. Keine Montage ohne schriftliches OK.</p></details><details class="faq-item"><summary>Kondensat? <span>+</span></summary><p>Führung zum Ablauf; sonst Pumpe (CHF 280–450). Auf Fotos erkennbar.</p></details></div>`},
+"/contact":{en:`<div class="section-label">Contact</div><h1>Talk to us</h1><p class="lead">Best is to start the estimate — we have your photos & PLZ and can answer precisely. Or call.</p><div style="display:grid;gap:12px;margin-top:16px"><div class="card"><b>Call / WhatsApp</b><p><a href="tel:+41779743914">077 974 39 14</a> • <a href="https://wa.me/41779743914">WhatsApp</a></p><p style="color:var(--muted);font:400 13px Inter">Mo–Fr 9–17h • reply within 24h</p></div><div class="card"><b>Email</b><p><a href="mailto:hallo@klimapro.ch">hallo@klimapro.ch</a></p><form onsubmit="event.preventDefault();alert('Message sent (demo)') " style="display:grid;gap:8px;margin-top:10px"><input class="input" placeholder="Your name"><input class="input" placeholder="Email"><textarea class="input" rows="3" placeholder="Message"></textarea><button class="btn btn-primary">Send</button></form></div></div>`,de:`<div class="section-label">Kontakt</div><h1>Kontakt</h1><p class="lead">Am besten via Estimate — wir haben Fotos & PLZ und antworten präzise. Oder anrufen.</p><div style="display:grid;gap:12px;margin-top:16px"><div class="card"><b>Anrufen / WhatsApp</b><p><a href="tel:+41779743914">077 974 39 14</a> • <a href="https://wa.me/41779743914">WhatsApp</a></p></div><div class="card"><b>E-Mail</b><p><a href="mailto:hallo@klimapro.ch">hallo@klimapro.ch</a></p></div></div>`},
+"/privacy":{en:`<h1>Privacy (nDSG)</h1><p class="lead">We store name, phone, email, PLZ, photos, answers to provide your quote. Stored in EU, deleted on request. No sale of data. Contact: hallo@klimapro.ch</p>`,de:`<h1>Datenschutz (nDSG)</h1><p class="lead">Wir speichern Name, Telefon, E-Mail, PLZ, Fotos, Antworten für Ihre Offerte. Speicherung in EU, Löschung auf Wunsch. Kein Verkauf. Kontakt: hallo@klimapro.ch</p>`},
+"/terms":{en:`<h1>Terms (AGB)</h1><p class="lead">Quotes valid 30 days. Deposit 30% on order, remainder after commissioning. Installation date subject to stock & permits. Warranty per manufacturer.</p>`,de:`<h1>AGB</h1><p class="lead">Offerten 30 Tage gültig. Anzahlung 30% bei Auftrag, Rest nach Inbetriebnahme. Termin abhängig von Lager & Bewilligung. Garantie gemäss Hersteller.</p>`},
+"/imprint":{en:`<h1>Imprint</h1><p class="lead">KlimaPro (sole proprietorship, bootstrapped), Greater Zurich. Email hallo@klimapro.ch • Phone 077 974 39 14. Installation via certified partner. ESTI/NIV numbers displayed after verification.</p>`,de:`<h1>Impressum</h1><p class="lead">KlimaPro (Einzelunternehmen, bootstrapped), Greater Zurich. E-Mail hallo@klimapro.ch • Tel 077 974 39 14.</p>`}
+}
+
+function openEstimate(pkg){
+  const m=document.getElementById('estimateModal')
+  const src=document.querySelector('#page-estimate .quiz')
+  const dst=document.getElementById('modalQuizContainer')
+  if(dst && src && !dst.hasChildNodes()){
+    dst.innerHTML=src.innerHTML
+    bindQuizEvents(dst)
+  }
+  m.classList.add('open')
+  document.body.style.overflow='hidden'
+  if(pkg) setTimeout(()=>{ const b=dst.querySelector(`[data-group="rooms"] [data-v="${pkg}"]`); if(b) b.click(); },50)
+  updateQuizUI()
+}
+
+function closeEstimate(){ document.getElementById('estimateModal').classList.remove('open'); document.body.style.overflow='' }
+
+// hero carousel
+let heroIdx=0
+const totalSlides=5
+function showSlide(idx){
+  const slides = document.querySelectorAll('.hero-slide')
+  heroIdx = (idx + totalSlides) % totalSlides
+  slides.forEach((s, i) => {
+    s.style.transform = `translateX(-${heroIdx * 100}%)`
+  })
+  document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===heroIdx))
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  const btnNext=document.getElementById('heroNext')
+  const btnPrev=document.getElementById('heroPrev')
+  const dots=document.querySelectorAll('.dot')
+  
+  if(btnNext) btnNext.onclick = () => showSlide(heroIdx + 1)
+  if(btnPrev) btnPrev.onclick = () => showSlide(heroIdx - 1)
+  
+  dots.forEach(d=>d.onclick=()=>{
+    showSlide(parseInt(d.dataset.i))
+  })
+})
+
+function renderGeneric(){
+  const hash=location.hash.replace('#','')||'/'
+  const path=hash.split('?')[0]
+  if(path.startsWith('/areas/') && path!=='/areas'){
+    const city=path.split('/')[2]
+    const content=`<div class="section-label">Service Area • Greater Zurich + Aargau</div><h1>Klimaanlage ${city.charAt(0).toUpperCase()+city.slice(1)}</h1><p class="lead" style="margin-top:8px">${lang==='de'?'Professionell installiert inkl. Wartung in '+city+'. Wir kennen lokale Gebäudetypen und klären Bewilligung für Sie.':'Professionally installed incl. maintenance in '+city+'. We know local building types and handle permit checks for you.'}</p><div style="margin-top:16px" class="card"><b>${lang==='de'?'Typische Objekte':'Typical buildings'}</b><p style="color:var(--muted);font:400 13px Inter">${city==='zuerich' || city==='zurich' ? (lang==='de'?'Altbau, STWEG, Innenstadt — Lärm & Ortsbild beachten':'Old town, STWEG, centre — noise & appearance check') : (lang==='de'?'EFH, Wohnungen, Gewerbe — Balkon/Garten-Montage':'Houses, flats, small business — balcony/garden mounting')}</p><div style="margin-top:12px"><button onclick="openEstimate()" class="btn btn-primary">${lang==='de'?'PLZ prüfen & Offerte →':'Check postcode & quote →'}</button></div></div><p style="margin-top:12px"><a href="#/areas" style="text-decoration:underline">${lang==='de'?'← Alle Gebiete':'← All areas'}</a></p>`
+    document.getElementById('genericContent').innerHTML=content
+    if(window.initScrollAnimations) window.initScrollAnimations()
+    return
+  }
+  const entry=genericPages[path]
+  if(entry){
+    document.getElementById('genericContent').innerHTML=entry[lang]||entry.en
+  }
+  if(window.initScrollAnimations) window.initScrollAnimations()
+}
+
+function router(){
+  const hash=location.hash.replace('#','')||'/'
+  const path=hash.split('?')[0]
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'))
+  if(path==='/' || path===''){document.getElementById('page-home').classList.add('active')}
+  else if(path==='/estimate'){document.getElementById('page-estimate').classList.add('active');updateQuizUI(); if(hash.includes('pkg=')){const v=new URLSearchParams(hash.split('?')[1]).get('pkg'); if(v){ const c = getActiveQuizContainer(); c?.querySelector(`[data-group="rooms"] [data-v="${v}"]`)?.click() }}}
+  else {document.getElementById('page-generic').classList.add('active');renderGeneric()}
+  window.scrollTo(0,0)
+  if(window.initScrollAnimations) window.initScrollAnimations()
+}
+window.addEventListener('hashchange',router)
+window.addEventListener('DOMContentLoaded',()=>{
+  router();
+  if(window.initScrollAnimations) window.initScrollAnimations();
+})
+document.getElementById('ham').onclick=()=>document.getElementById('mobileMenu').classList.toggle('open')
+document.querySelectorAll('#mobileMenu a').forEach(a=>a.onclick=()=>document.getElementById('mobileMenu').classList.remove('open'))
+</script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Lenis smooth momentum scrolling */
+  var lenis = null;
+  if(!reduced && window.Lenis){
+    lenis = new Lenis({ duration: 1.15, easing: function(t){ return Math.min(1, 1.001 - Math.pow(2, -10 * t)); }, smoothWheel: true });
+    var rafL = function(t){ lenis.raf(t); requestAnimationFrame(rafL); };
+    requestAnimationFrame(rafL);
+    window.scrollTo = function(a){
+      if(a && typeof a === 'object') lenis.scrollTo(a.top || 0, { immediate: a.behavior !== 'smooth' });
+      else lenis.scrollTo(a || 0, { immediate: true });
+    };
+  }
+
+  /* Reveal engine v2 with scroll fallback */
+  var revealObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0.05, rootMargin: '0px 0px 50px 0px' });
+
+  window.initScrollAnimations = function(){
+    var elements = document.querySelectorAll('.card, .step, .pro-card, .trust-item, .estimator, .maintenance, .faq-item, .service-map, .city, h2, h3');
+    elements.forEach(function(el){
+      if(!el.classList.contains('reveal')) el.classList.add('reveal');
+      revealObserver.observe(el);
+      var rect = el.getBoundingClientRect();
+      if(rect.top < window.innerHeight){
+        el.classList.add('is-visible');
+      }
+    });
+  };
+
+  /* Scroll loop for animations & reveal fallback */
+  var nav = document.querySelector('.nav');
+  var lastY = 0;
+
+  function frame(){
+    var y = window.scrollY || 0;
+    if(nav){
+      nav.classList.toggle('nav-scrolled', y > 10);
+    }
+    
+    // Check hidden elements on scroll as a bulletproof fallback
+    document.querySelectorAll('.reveal:not(.is-visible)').forEach(function(el){
+      var r = el.getBoundingClientRect();
+      if(r.top < window.innerHeight - 30){
+        el.classList.add('is-visible');
+      }
+    });
+
+    lastY = y;
+    requestAnimationFrame(frame);
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    window.initScrollAnimations();
+    requestAnimationFrame(frame);
+    window.addEventListener('scroll', window.initScrollAnimations, { passive: true });
+  });
+})();
+</script>
+
+</body></html>
