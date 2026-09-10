@@ -125,7 +125,7 @@ img{max-width:100%;display:block}
 .carousel-btn.prev{left:12px}
 .carousel-btn.next{right:12px}
 
-.hero-dots{position:absolute;bottom:72px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:2}
+.hero-dots{position:absolute;bottom:115px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:3}
 .dot{width:8px;height:8px;border-radius:999px;background:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.8);cursor:pointer;transition: transform 0.2s ease, background 0.2s ease;}
 .dot:hover{transform: scale(1.3);}
 .dot.active{background:#fff}
@@ -356,9 +356,6 @@ body.hero-ready .hero-anim{animation:heroRise 1.05s cubic-bezier(.16,1,.3,1) var
 body.hero-ready .hero-visual{clip-path:inset(0 0 0 0 round 24px)}
 body.hero-ready .hero-slide img{animation:imgSettle 2s cubic-bezier(.16,1,.3,1) .35s both}
 @keyframes imgSettle{from{transform:scale(1.16)}to{transform:scale(1)}}
-body.hero-ready .hero-card{animation:heroRise 1.05s cubic-bezier(.16,1,.3,1) 1.05s both,cardFloat 6.5s ease-in-out 2.4s infinite}
-.hero-card:hover{animation-play-state:paused}
-@keyframes cardFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
 
 /* Parallax targets (var-driven, hover-safe) */
 .estimator-card{transform:translateY(var(--py,0px))}
@@ -435,20 +432,113 @@ body.hero-ready .hero-card{animation:heroRise 1.05s cubic-bezier(.16,1,.3,1) 1.0
         <button class="carousel-btn prev" id="heroPrev">‹</button>
         <button class="carousel-btn next" id="heroNext">›</button>
         <div class="hero-carousel" id="heroCarousel">
-          <div class="hero-slide"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Modern Swiss apartment"></div>
-          <div class="hero-slide"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" alt="Living room with AC"></div>
-          <div class="hero-slide"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea" alt="House with outdoor unit"></div>
-          <div class="hero-slide"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f" alt="Modern interior design"></div>
-          <div class="hero-slide"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6" alt="Cozy apartment room"></div>
-        </div>
-        <div class="hero-dots" id="heroDots"><span class="dot active" data-i="0"></span><span class="dot" data-i="1"></span><span class="dot" data-i="2"></span><span class="dot" data-i="3"></span><span class="dot" data-i="4"></span></div>
-        <div class="hero-card">
-          <div class="hero-card-row"><span data-i18n="hero.card1">Typisches 2-Raum-Projekt</span><span class="pill" style="padding:4px 8px">Winterthur</span></div>
-          <div style="display:flex;justify-content:space-between;align-items:end;margin-top:8px">
-            <div><strong>CHF 6'200</strong><div style="font:400 12px Inter;color:var(--muted)" data-i18n="hero.card2">ab inkl. Standardmontage</div></div>
-            <div style="text-align:right;font:400 12px Inter;color:var(--muted)">Daikin • 1 Tag<br><span data-i18n="hero.card3">inkl. Inbetriebnahme</span></div>
+          <!-- Slide 1 -->
+          <div class="hero-slide">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Moderne Schweizer Wohnung">
+            <div class="hero-card">
+              <div class="hero-card-row">
+                <span>Typisches 2-Raum-Projekt</span>
+                <span class="pill" style="padding:4px 8px">Winterthur</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:end;margin-top:8px">
+                <div>
+                  <strong>CHF 6'200</strong>
+                  <div style="font:400 12px Inter;color:var(--muted)">ab inkl. Standardmontage</div>
+                </div>
+                <div style="text-align:right;font:400 12px Inter;color:var(--muted)">
+                  Daikin • 1 Tag<br>
+                  <span>inkl. Inbetriebnahme</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="hero-slide">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" alt="Wohnzimmer mit Klimaanlage">
+            <div class="hero-card">
+              <div class="hero-card-row">
+                <span>1-Raum Schlafzimmer / Büro</span>
+                <span class="pill" style="padding:4px 8px">Baden</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:end;margin-top:8px">
+                <div>
+                  <strong>CHF 3'500</strong>
+                  <div style="font:400 12px Inter;color:var(--muted)">ab inkl. Standardmontage</div>
+                </div>
+                <div style="text-align:right;font:400 12px Inter;color:var(--muted)">
+                  Mitsubishi • 6 Std.<br>
+                  <span>inkl. Flüstermodus</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="hero-slide">
+            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea" alt="Einfamilienhaus mit Aussengerät">
+            <div class="hero-card">
+              <div class="hero-card-row">
+                <span>3-Raum Einfamilienhaus</span>
+                <span class="pill" style="padding:4px 8px">Uster</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:end;margin-top:8px">
+                <div>
+                  <strong>CHF 8'500</strong>
+                  <div style="font:400 12px Inter;color:var(--muted)">ab inkl. Standardmontage</div>
+                </div>
+                <div style="text-align:right;font:400 12px Inter;color:var(--muted)">
+                  Daikin Multi • 1.5 Tage<br>
+                  <span>inkl. Heizfunktion</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="hero-slide">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f" alt="Moderne Attikawohnung">
+            <div class="hero-card">
+              <div class="hero-card-row">
+                <span>2-Raum Attikawohnung</span>
+                <span class="pill" style="padding:4px 8px">Zürich 8004</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:end;margin-top:8px">
+                <div>
+                  <strong>CHF 6'800</strong>
+                  <div style="font:400 12px Inter;color:var(--muted)">ab inkl. Standardmontage</div>
+                </div>
+                <div style="text-align:right;font:400 12px Inter;color:var(--muted)">
+                  Daikin • 1 Tag<br>
+                  <span>inkl. Balkonmontage</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="hero-slide">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6" alt="Gemütliches Apartment">
+            <div class="hero-card">
+              <div class="hero-card-row">
+                <span>1-Raum Studio</span>
+                <span class="pill" style="padding:4px 8px">Aarau</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:end;margin-top:8px">
+                <div>
+                  <strong>CHF 3'700</strong>
+                  <div style="font:400 12px Inter;color:var(--muted)">ab inkl. Standardmontage</div>
+                </div>
+                <div style="text-align:right;font:400 12px Inter;color:var(--muted)">
+                  Mitsubishi • 1 Tag<br>
+                  <span>inkl. Kernbohrung</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
+        <div class="hero-dots" id="heroDots"><span class="dot active" data-i="0"></span><span class="dot" data-i="1"></span><span class="dot" data-i="2"></span><span class="dot" data-i="3"></span><span class="dot" data-i="4"></span></div>
       </div>
     </div>
   </section>
@@ -758,7 +848,7 @@ body.hero-ready .hero-card{animation:heroRise 1.05s cubic-bezier(.16,1,.3,1) 1.0
     <div><div class="logo" style="color:#fff"><span class="logo-mark" style="background:#fff;color:#111">K</span> KlimaPro</div><p style="opacity:.6;font:400 13px Inter;margin-top:10px" data-i18n="footer.tag">Klimaanlage inkl. Montage &amp; Wartung. Greater Zurich.</p><p style="opacity:.5;font:400 12px Inter;margin-top:10px">© 2026 KlimaPro • Bootstrapped • Greater Zurich</p></div>
     <div><b style="font:600 13px Inter">Erkunden</b><div style="display:grid;gap:8px;margin-top:10px;font:400 14px Inter"><a href="#/solutions" data-i18n="nav.solutions">Lösungen</a><a href="#/pricing" data-i18n="nav.pricing">Preise</a><a href="#/installation" data-i18n="nav.installation">Installation</a><a href="#/maintenance" data-i18n="nav.maintenance">Wartung</a></div></div>
     <div><b style="font:600 13px Inter">Service</b><div style="display:grid;gap:8px;margin-top:10px;font:400 14px Inter"><a href="#/areas" data-i18n="nav.areas">Gebiet</a><a href="#/permits" data-i18n="nav.permits">Bewilligung</a><a href="#/faq" data-i18n="nav.faq">FAQ</a><a href="#/contact">Kontakt</a></div></div>
-    <div><b style="font:600 13px Inter">Kontakt</b><div style="display:grid;gap:8px;margin-top:10px;font:400 14px Inter"><a href="tel:+41779743914">077 974 39 14</a><a href="mailto:dronasindhu19@gmail.com">dronasindhu19@gmail.com</a><a href="https://wa.me/41779743914">WhatsApp</a></div><div style="margin-top:12px;display:flex;gap:8px"><a href="#/privacy" style="font:400 12px Inter" data-i18n="footer.privacy">Datenschutz</a><a href="#/terms" style="font:400 12px Inter" data-i18n="footer.terms">AGB</a><a href="#/imprint" style="font:400 12px Inter" data-i18n="footer.imprint">Impressum</a></div></div>
+    <div><b style="font:600 13px Inter">Kontakt</b><div style="display:grid;gap:8px;margin-top:10px;font:400 14px Inter"><a href="tel:+41779743914">077 974 39 14</a><a href="dronasindhu19@gmail.com">dronasindhu19@gmail.com</a><a href="https://wa.me/41779743914">WhatsApp</a></div><div style="margin-top:12px;display:flex;gap:8px"><a href="#/privacy" style="font:400 12px Inter" data-i18n="footer.privacy">Datenschutz</a><a href="#/terms" style="font:400 12px Inter" data-i18n="footer.terms">AGB</a><a href="#/imprint" style="font:400 12px Inter" data-i18n="footer.imprint">Impressum</a></div></div>
   </div>
 </footer>
 
@@ -777,7 +867,7 @@ body.hero-ready .hero-card{animation:heroRise 1.05s cubic-bezier(.16,1,.3,1) 1.0
 const dict={
 en:{
 "nav.solutions":"Solutions","nav.pricing":"Pricing","nav.installation":"Installation","nav.maintenance":"Maintenance","nav.permits":"Permits","nav.areas":"Areas","nav.faq":"FAQ","nav.contact":"Contact","nav.cta":"Get estimate",
-"hero.eyebrow":"Greater Zurich • Residential & Small Business","hero.h1":"Air conditioning <em>supplied, professionally installed & maintained.</em>","hero.sub":"Tell us about your home. We recommend the right system, handle installation and look after it afterwards. No catalogue, no jargon.","hero.cta1":"Get my estimate in 2 min →","hero.cta2":"See how it works","hero.pill1":"Fixed-price quote","hero.pill2":"Qualified partner installers","hero.pill3":"Brand equipment • Warranty","hero.card1":"Typical 2-room project","hero.card2":"from incl. standard installation","hero.card3":"incl. commissioning",
+"hero.eyebrow":"Greater Zurich • Residential & Small Business","hero.h1":"Air conditioning <em>supplied, professionally installed & maintained.</em>","hero.sub":"Tell us about your home. We recommend the right system, handle installation and look after it afterwards. No catalogue, no jargon.","hero.cta1":"Get my estimate in 2 min →","hero.cta2":"See how it works","hero.pill1":"Fixed-price quote","hero.pill2":"Qualified partner installers","hero.pill3":"Brand equipment • Warranty",
 "trust.t1":"Swiss service area","trust.d1":"Zurich + Aargau. We know local buildings & rules.","trust.t2":"Qualified installation partner","trust.d2":"Certified refrigeration + licensed electrician (ESTI).","trust.t3":"Established brands","trust.d3":"Daikin, Mitsubishi Electric — selected for reliability.","trust.t4":"Transparent quotation","trust.d4":"What's included vs. possible extras — in writing.",
 "problem.label":"Why with us","problem.h2":"Doing it <em>with us</em> vs. on your own.","problem.lead":"AC looks simple online — until permits, electrics, drainage and noise rules appear. We handle it end-to-end.","problem.c1t":"Doing it yourself","problem.c1a":"10+ models, SEER/SCOP jargon — you become the expert","problem.c1b":"Quote without site check → surprise costs","problem.c1c":"You chase electrician, permits, STWEG","problem.c1d":"No one maintains it afterwards","problem.c2t":"Common worries we solve","problem.c2a":"Outdoor unit placement & noise (LSV)","problem.c2b":"Drilling & pipe length — fixed before start","problem.c2c":"Rented flat — landlord sheet included","problem.c2d":"Maintenance, warranty, priority service","problem.c3t":"With KlimaPro","problem.c3a":"We recommend the right system — no jargon","problem.c3b":"We assess via photos + PLZ, flag extras upfront","problem.c3c":"We coordinate install & certified electrician","problem.c3d":"Fixed quote + annual care — one contact","problem.cta":"Start assessment →",
 "packages.label":"Simple packages — not a catalogue","packages.h2":"One, two or three rooms. <em>We size it for you.</em>","packages.lead":"Each package includes equipment, standard installation and commissioning. Extra work, if needed, quoted transparently.","packages.p1k":"1 Room • Bedroom / Office","packages.p2k":"2 Rooms • Apartment","packages.p3k":"3 Rooms • House / Larger flat","packages.from":"from","packages.popular":"Most chosen","packages.p1a":"1 indoor + 1 outdoor unit","packages.p1b":"Up to 3 m piping, 1 core drill","packages.p1c":"Commissioning & handover","packages.p1d":"Manufacturer warranty","packages.p2a":"2 indoor + 1 outdoor unit","packages.p2b":"Up to 3 m per unit, 1-2 drills","packages.p2c":"Condensate routing included*","packages.p2d":"Quiet sleep mode","packages.p3a":"3 indoor + 1 outdoor unit","packages.p3b":"Up to 3 m per unit","packages.p3c":"Heating mode optional","packages.p3d":"Priority maintenance","packages.cta":"Check 1-room →","packages.cta2":"Check 2-room →","packages.cta3":"Check 3-room →","packages.note":"incl. VAT. Extras separate.","packages.footer":"* If no gravity drain, condensate pump is an extra (CHF 280–450). We flag it from your photos.",
@@ -793,7 +883,7 @@ en:{
 },
 de:{
 "nav.solutions":"Lösungen","nav.pricing":"Preise","nav.installation":"Installation","nav.maintenance":"Wartung","nav.permits":"Bewilligung","nav.areas":"Gebiet","nav.faq":"FAQ","nav.contact":"Kontakt","nav.cta":"Offerte anfordern",
-"hero.eyebrow":"Greater Zurich • Wohnung & kleines Gewerbe","hero.h1":"Klimaanlage <em>inkl. Montage & Service.</em>","hero.sub":"Sagen Sie uns, was gekühlt werden soll. Wir empfehlen das passende System, übernehmen die Installation und kümmern uns danach darum. Kein Katalog, kein Fachchinesisch.","hero.cta1":"Offerte in 2 Min. anfordern →","hero.cta2":"So funktioniert's","hero.pill1":"Festpreis-Offerte","hero.pill2":"Geprüfte Installationspartner","hero.pill3":"Markengeräte • Garantie","hero.card1":"Typisches 2-Raum-Projekt","hero.card2":"ab inkl. Standardmontage","hero.card3":"inkl. Inbetriebnahme",
+"hero.eyebrow":"Greater Zurich • Wohnung & kleines Gewerbe","hero.h1":"Klimaanlage <em>inkl. Montage & Service.</em>","hero.sub":"Sagen Sie uns, was gekühlt werden soll. Wir empfehlen das passende System, übernehmen die Installation und kümmern uns danach darum. Kein Katalog, kein Fachchinesisch.","hero.cta1":"Offerte in 2 Min. anfordern →","hero.cta2":"So funktioniert's","hero.pill1":"Festpreis-Offerte","hero.pill2":"Geprüfte Installationspartner","hero.pill3":"Markengeräte • Garantie",
 "trust.t1":"Schweizer Servicegebiet","trust.d1":"Zürich + Aargau. Wir kennen Gebäude & Regeln.","trust.t2":"Geprüfter Installationspartner","trust.d2":"Zertifizierte Kälte + konzessionierter Elektriker (ESTI).","trust.t3":"Bewährte Marken","trust.d3":"Daikin, Mitsubishi Electric — zuverlässig & leise.","trust.t4":"Transparente Offerte","trust.d4":"Inklusive vs. mögliche Extras — schriftlich.",
 "problem.label":"Warum mit uns","problem.h2":"Mit <em>uns</em> vs. alleine.","problem.lead":"Online wirkt Klima einfach — bis Bewilligung, Elektro, Kondensat & Lärm kommen. Wir übernehmen alles.","problem.c1t":"Alleine machen","problem.c1a":"10+ Modelle, SEER/SCOP — Sie werden zum Experten","problem.c1b":"Offerte ohne Check → Mehrkosten","problem.c1c":"Sie jagen Elektriker, Bewilligung, STWEG","problem.c1d":"Danach kümmert sich niemand","problem.c2t":"Sorgen, die wir lösen","problem.c2a":"Aussenplatz & Lärm (LSV)","problem.c2b":"Bohrung & Leitung — vorher fixiert","problem.c2c":"Miete — Vermieter-Merkblatt inkl.","problem.c2d":"Wartung, Garantie, Priorität","problem.c3t":"Mit KlimaPro","problem.c3a":"Wir empfehlen — kein Fachchinesisch","problem.c3b":"Wir prüfen via Fotos + PLZ, melden Extras vorab","problem.c3c":"Wir koordinieren Montage & Elektriker","problem.c3d":"Festpreis + Jahrespflege — ein Ansprechpartner","problem.cta":"Abklärung starten →",
 "packages.label":"Einfache Pakete — kein Katalog","packages.h2":"Ein, zwei oder drei Räume. <em>Wir dimensionieren.</em>","packages.lead":"Jedes Paket inkl. Gerät, Standardmontage und Inbetriebnahme. Mehrarbeit, falls nötig, transparent offeriert.","packages.p1k":"1 Raum • Schlafzimmer / Büro","packages.p2k":"2 Räume • Wohnung","packages.p3k":"3 Räume • Haus / grosse Wohnung","packages.from":"ab","packages.popular":"Meist gewählt","packages.p1a":"1 Innen- + 1 Aussengerät","packages.p1b":"Bis 3 m Leitung, 1 Kernbohrung","packages.p1c":"Inbetriebnahme & Übergabe","packages.p1d":"Herstellergarantie","packages.p2a":"2 Innen- + 1 Aussengerät","packages.p2b":"Bis 3 m pro Gerät, 1–2 Bohrungen","packages.p2c":"Kondensatführung inkl.*","packages.p2d":"Flüstermodus","packages.p3a":"3 Innen- + 1 Aussengerät","packages.p3b":"Bis 3 m pro Gerät","packages.p3c":"Heizen optional","packages.p3d":"Prioritätswartung","packages.cta":"1-Raum prüfen →","packages.cta2":"2-Raum prüfen →","packages.cta3":"3-Raum prüfen →","packages.note":"inkl. MwSt. Extras separat.","packages.footer":"* Ohne Schwerkraftablauf: Kondensatpumpe als Extra (CHF 280–450). Wir erkennen es auf Ihren Fotos.",
